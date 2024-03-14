@@ -127,24 +127,22 @@ li a:hover:after{
 }
 
 .info-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  background-color: #EDF2F7;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: white;
-  height: 70vh;
-  margin: 10px;
-  cursor: default;
+  padding: 100px 0;
 }
 
 .box-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  background-color: #e5e7eb;
-  height: 50vh;
-  gap: 100px;
+  align-items: center;
+  background-color: #D5DCE5;
+  padding: 20px;
+  height: 70vh;
+}
+
+.box-wrapper {
+  flex-wrap: wrap;
+  gap: 64px;
 }
 
 .info-text {
@@ -158,8 +156,6 @@ li a:hover:after{
 }
 
 .box {
-  justify-self: center;
-  align-self: center;
   width: 150px;
   height: 150px;
 }
@@ -167,10 +163,10 @@ li a:hover:after{
 .box, .info-box {
   border-radius: 10px;
   border: solid 3px #3882f6;
+  cursor: pointer;
   transition: all 0.3s ease 0s;
   transform: scale();
 }
-
 
 .box:hover{
   transform: scale(1.2);
