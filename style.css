@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #EDF2F7;
+}
+
+.header-icon {
+    height: 30px;
+    width: auto;
+}
+
+.nav-links li {
+    display: inline-block;
+    list-style: none;
+}
+
+
+li a {
+    padding: 0 16px;
+    text-decoration: none;
+    color: #0F1945;
+    transition: all 0.3s ease 0s;
+}
+
+li a:hover {
+    color: #495381;
+}
+
+.hero-section {
+    flex-wrap: wrap;
+    background-color: #D5DCE5;
+    height: 93vh;
+    padding: 16px;
+}
+
+.hero-mid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-main-text {
+    font-weight: bolder;
+    font-size: 48px;
+    color: #0F1945;
+}
+
+.hero-subtext {
+    color: #e5e7eb;
+    font-size: 18px;
+    font-weight: 300px;
+    margin: 6px 0 24px 0;
+}
+
+.hero-image {
+    width: 300px;
+    height: 300px;
+}
+
+.hero-btn {
+    align-self: center;
+    justify-self: center;
+    background-color: #3882f6;
+    border-radius: 10px;
+    color: #f9faf8;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all 0.3s ease 0s;
+}
+
+.hero-btn:hover {
+    background-color: #3d77d3;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    height: 70vh;
+    margin: 10px;
+}
+
+.box-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #e5e7eb;
+    height: 50vh;
+    gap: 100px;
+}
+
+.info-text {
+    width: 480px;
+    margin: 20px;
+}
+
+.info-box  {
+    width: 300px; 
+    height: 300px;
+}
+
+.box {
+    justify-self: center;
+    align-self: center;
+    width: 150px;
+    height: 150px;
+}
+
+.box, .info-box {
+    border-radius: 10px;
+    border: solid 3px #3882f6;
+}
+
+footer {
+    height: 100px;
+    background-color: #EDF2F7;
+    color: #f9faf8;
+    height: 200px;
+}
+
+.dev-name {
+    font-weight: bolder;
+    font-size: 48px;
+    color: #0F1945;
+}
