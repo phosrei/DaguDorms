@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.home-container {
+  left: 0;
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.home-home {
+  width: 100%;
+  height: 1083px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  background-color: rgba(213, 220, 229, 1);
+}
+.home-header {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 49px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(237, 242, 247, 1);
+}
+.home-button {
+  top: 15px;
+  left: 1101px;
+  color: rgba(15, 25, 69, 1);
+  width: 47px;
+  height: 13px;
+  position: absolute;
+  font-size: 15px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.listings-button {
+  top: 15px;
+  left: 1209px;
+  color: rgba(15, 25, 69, 1);
+  width: 60px;
+  height: 13px;
+  position: absolute;
+  font-size: 15px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-us-button {
+  top: 15px;
+  left: 1330px;
+  color: rgba(15, 25, 69, 1);
+  width: 69px;
+  height: 13px;
+  position: absolute;
+  font-size: 15px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.home-icon {
+  top: 5.441170692443848px;
+  left: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.main-container {
+  top: 37px;
+  left: 0px;
+  width: 100%;
+  height: 404.1px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.main-image-container {
+  flex: 1 0 100%;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow-y: hidden;
+  position: absolute;
+}
+.dagudorms-text {
+    top: 163px;
+    left: 603px;
+    color: rgba(15, 25, 69, 1);
+    width: 234px;
+    height: 44px;
+    position: absolute;
+    font-size: 40px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+.home-get-started-button {
+  top: 251px;
+  left: 634px;
+  width: 172px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  position: absolute;
+  background-color: rgba(237, 242, 247, 1);
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  font-style: bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.find-a-dorm {
+  top: 310px;
+  left: 683px;
+  color: rgba(133, 125, 125, 1);
+  width: 74px;
+  height: 12px;
+  position: absolute;
+  font-size: 13px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+}
+.sub-container1 {
+    top: 453px;
+    left: 0px;
+    width: 100%;
+    height: 255px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(237, 242, 247, 1);
+}
+.sub-container-text {
+  top: 42px;
+  left: 124px;
+  color: rgba(0, 0, 0, 1);
+  width: 729px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.sub-image-container1 {
+  top: 42px;
+  left: 1093px;
+  width: 273px;
+  height: 172px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.sub-image-container1 img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+.sub-container2 {
+  top: 708px;
+  left: 0px;
+  width: 100%;
+  height: 255px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(237, 242, 247, 1);
+}
+.sub-image-container2 {
+  top: 71px;
+  left: 313px;
+  width: 128.25px;
+  height: 114px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sub-image-container2 img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+.sub-image-container3 {
+  top: 71px;
+  left: 540px;
+  width: 128.25px;
+  height: 114px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sub-image-container3 img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+.sub-image-container4 {
+  top: 71px;
+  left: 775px;
+  width: 128.25px;
+  height: 114px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sub-image-container4 img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+.sub-image-container5 {
+  top: 71px;
+  left: 1002px;
+  width: 128.25px;
+  height: 114px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.sub-image-container5 img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+.home-footer {
+  background-color: #D5DCE5;
+  top: 963px;
+  left: 0;
+  width: 100%;
+  height: 145px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.about-us-text {
+  top: 8px;
+  left: 1222px;
+  color: rgba(0, 0, 0, 1);
+  width: 175px;
+  height: 115px;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.bit5-text1 {
+  top: 9px;
+  left: 43px;
+  color: rgba(0, 0, 0, 1);
+  height: 15px;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.bit5-text2 {
+  top: 32px;
+  left: 43px;
+  color: rgba(0, 0, 0, 1);
+  height: 15px;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.bit5-text3 {
+  top: 55px;
+  left: 43px;
+  color: rgba(0, 0, 0, 1);
+  height: 15px;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.bit5-text4 {
+  top: 78px;
+  left: 43px;
+  color: rgba(0, 0, 0, 1);
+  height: 15px;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.bit5-text5 {
+  top: 101px;
+  left: 43px;
+  color: rgba(0, 0, 0, 1);
+  height: 15px;
+  position: absolute;
+  font-size: 12px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-us-dagudorms {
+  top: 45px;
+  left: 644px;
+  color: rgba(15, 25, 69, 1);
+  width: 152px;
+  height: 29px;
+  position: absolute;
+  font-size: 24px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
