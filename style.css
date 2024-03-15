@@ -177,16 +177,16 @@ li a:hover:after{
 }
 
 footer {
-  height: 100px;
+  height: 80px;
   background-color: #EDF2F7;
   color: #f9faf8;
+  background-color: #0F1945;
   height: 200px;
 }
 
 .dev-name {
   font-weight: bolder;
   font-size: 48px;
-  color: #0F1945;
   cursor: default;
 }
 
