@@ -16,7 +16,7 @@
 <body>
     <header>
         <a href="index.html">
-            <img class="header-icon" src="assets/dagudorms-icon.svg" alt="Header Icon">
+            <img class="header-icon" src="dagudorms-icon.svg" alt="Header Icon">
         </a>
         <nav class="nav-links">
             <ul>
@@ -27,7 +27,7 @@
         </nav>
     </header>
     <section class="dorms-section flex-center">
-        <div class="dorms-wrapper">
+        <div class="dorms-wrapper flex-center">
             <div class="top-dorms-section">
                 <div class="search-box">
                     <span class="search-icon material-symbols-outlined">search</span>
@@ -36,15 +36,16 @@
                     </form>
                 </div>
                 <div class="move-dates-wrapper">
-                    <div class="move-dates flex-center">
-                        <p>Move-in Date</p>
-                        <input class="move-input" type="date" name="end-date" id="end-date">
-                    </div>
-                    <div class="move-dates flex-center">
-                        <p>Move-out Date</p>
-                        <input class="move-input" type="date" name="end-date" id="end-date">
-                    </div>
-                    <a class="search-button flex-center" href="#">Search</a>
+                        <div class="move-dates flex-center">
+                            <p>Move-in Date</p>
+                            <input class="move-input" type="date" name="end-date" id="start-date">
+                        </div>
+                        <div class="move-dates flex-center">
+                            <p>Move-out Date</p>
+                            <input class="move-input" type="date" name="end-date" id="end-date">
+                        </div>
+                        <a class="search-button flex-center" href="#">Search</a>
+
                 </div>
             </div>
             <div class="dorms-listings">
@@ -108,5 +109,8 @@
                 </div>
             </div>
     </section>
+    <footer class="flex-center">
+        <p class="dev-name">BIT5</p>
+    </footer>
 </body>
 </html>
