@@ -238,7 +238,6 @@ footer {
 
 .search-button {
   font-size: 14px;
-  flex-grow: 1;
   border-left: 1px solid #cbd2db;
   font-weight: bold;
   color: #0F1945;
@@ -254,6 +253,7 @@ footer {
 
 .search-bar {
   display: flex;
+  flex-grow: 1;
   align-items: center;
   padding-left: 10px;
   margin-top: 20px;
@@ -261,27 +261,27 @@ footer {
   background-color: #EDF2F7;
 }
 
+.search-form {
+  flex-grow: 1;
+}
+
 .search-input {
-  flex: 1 2 0px;
   outline: none;
   border: none;
   background-color: inherit;
   border-radius: 0 16px 16px 0;
   padding-left: 10px;
   font-size: 16px;
-  width: 500px;
-  flex-grow: 1;
+  width: 100%;
   height: 45px;
 }
 
 .move-dates-wrapper {
   display: flex;
-  flex-grow: 1;
   padding-left: 32px;
   background-color: #EDF2F7;
   height: 45px;
   gap: 30px;
-  max-width: 534px;
   border-radius: 12px;
 }
 
