@@ -209,7 +209,7 @@ header:hover .home-header-icon {
 }
 
 .box {
-  border-radius: 10px;
+  border-radius: 12px;
   border: solid 3px #3882f6;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -276,7 +276,7 @@ footer {
 .filter-option {
   background-color: #fff;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .move-dates {
