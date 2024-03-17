@@ -124,9 +124,9 @@ header:hover .home-header-icon {
   padding: 16px;
   background-image: url('assets/city.png');
   background-color: #6cb6d6;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
 }
 
 .hero-mid {
@@ -186,8 +186,8 @@ header:hover .home-header-icon {
 .info-section {
   background-color: #EDF2F7;
   justify-content: space-evenly;
+  padding: 100px;
   flex-wrap: wrap;
-  padding: 100px 0;
 }
 
 .box-section {
