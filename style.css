@@ -123,10 +123,10 @@ header:hover .home-header-icon {
   height: 100vh;
   padding: 16px;
   background-image: url('assets/city.png');
-  background-color: rgb(108, 182, 214);
-  background-position: bottom;
+  background-color: #6cb6d6;
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 110%;
 }
 
 .hero-mid {
@@ -135,6 +135,7 @@ header:hover .home-header-icon {
   grid-template-rows: 1fr 1fr;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: -100px;
 }
 
 .hero-main-text {
@@ -155,15 +156,27 @@ header:hover .home-header-icon {
   height: 300px;
 }
 
-.btn-one, .btn-two {
+.hero-button, .btn-two {
   align-self: center;
   justify-self: center;
-  background-color: #3882f6;
-  border-radius: 10px;
-  color: #f9faf8;
+  color: #fff;
+  border-radius: 24px;
   text-decoration: none;
   padding: 8px 16px;
   transition: all 0.3s ease 0s;
+}
+
+.hero-button {
+  border: 2px solid #fff;
+}
+
+.hero-button:hover {
+  background-color: #fff;
+  color: #0F1945;
+}
+
+.btn-two {
+  background-color: #3882f6;
 }
 
 .btn-one:hover, .btn-two:hover {
