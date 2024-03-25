@@ -430,6 +430,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .SignUp-box{
   display: flex;
+  flex-grow: 1;
   border: 2px solid #DBDDE1;
   border-radius: 25px;
   width: 80%;
@@ -455,6 +456,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .column{
   display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   gap: 80px;
@@ -474,6 +477,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .form-box .layout{
   display: flex;
+  flex-grow: 1;
   margin-bottom: 10px;
   flex-direction: column;
   font-weight: 600;
@@ -487,6 +491,9 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 15px;
   margin-top: 10px;
   background-color: rgb(244, 242, 253);
+  display: flex;
+  flex-grow: 1 ;
+  
 }
 
 .form-box2{
@@ -496,7 +503,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .layout{
   display: flex;
-  justify-content:flex-start;
+  flex-grow: 1;
+  
   padding-top: 10px;
   padding-bottom: 10px;
   
@@ -504,6 +512,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .form-box2 .layout{
   display: flex;
+  flex-grow: 1;
   margin-bottom: 10px;
   flex-direction: column;
   font-weight: 600;
@@ -537,6 +546,9 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 .form-box, .form-box2{
+  
+
   padding-bottom: 100px;
 
 }
+
