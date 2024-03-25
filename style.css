@@ -428,7 +428,7 @@ input[type="search"]::-webkit-search-cancel-button {
   align-self: flex-end;
 }
 
-.login-box{
+.SignUp-box{
   display: flex;
   border: 2px solid #DBDDE1;
   border-radius: 25px;
@@ -442,7 +442,7 @@ input[type="search"]::-webkit-search-cancel-button {
   
 }
 
-.sign-in{
+.sign-up{
   display: flex;
   flex: 1;
   flex-direction:column;
