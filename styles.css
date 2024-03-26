@@ -547,6 +547,79 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-bottom: 100px;
 }
 
+.SignIn-box{
+  display: flex;
+  flex-grow: 1;
+  border: 2px solid #DBDDE1;
+  border-radius: 25px;
+  width: 70%;
+  gap: 16px;
+  margin: 16px 0;
+  align-self: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  flex-direction: column;
+  
+}
+
+.left{
+  margin-left: 50px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  
+}
+.right{
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+  background-color: #e5e7eb;
+  border-radius: 0px 22px 22px 0px;
+}
+
+.sign-in{
+  display: flex;
+  flex: 1;
+  flex-direction:column;
+  align-items: center;
+  justify-content: top;
+  padding: 19px 0 12px 0;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.pic{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 630px;
+  width: 530px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.Passlink{
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+}
+
+.SIbtn{
+  height: 45px;
+  width: 400px;
+  border: 0px;
+  border-radius: 15px;
+  margin-top: 10px;
+  background-color: rgb(244, 242, 253);
+  font-weight: 550;
+  font-size: medium;
+}
+
+.SIlink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
 .dorm-info-section {
   display: flex;
   gap: 16px;
