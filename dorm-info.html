@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<title>DaguDorms</title>
+  	<link rel="stylesheet"  href="dorm-info.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"/>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		let items = document.querySelectorAll('.item');
+		let currentIndex = 0;
+
+		document.getElementById('prev').addEventListener('click', function() {
+			if (currentIndex > 0) {
+				currentIndex--;
+			} else {
+				currentIndex = items.length - 1; // Loop back to the last item
+			}
+			items[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+		});
+
+		document.getElementById('next').addEventListener('click', function() {
+			if (currentIndex < items.length - 1) {
+				currentIndex++;
+			} else {
+				currentIndex = 0; // Loop back to the first item
+			}
+			items[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+		});
+	});
+	</script>
+    <header>
+        <a href="index.html">
+            <img class="header-icon" src="assets/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="about.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="contact.html" class="header-nav-link flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	<section class="dorm-info-section flex-center">
+		<button id="prev">Prev</button>
+		<div class="carousel" id="carousel">
+			<div class="item">Item 1</div>
+			<div class="item">Item 2</div>
+			<div class="item">Item 3</div>
+			<div class="item">Item 4</div>
+			<div class="item">Item 5</div>
+		</div>
+		<button id="next">Next</button>
+	</section>
+</body>
+</html>
