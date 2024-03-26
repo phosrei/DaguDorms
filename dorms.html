@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaguDorms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/inter');
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="header-icon" src="assets/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="about.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="contact.html" class="header-nav-link flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="dorms-section">
+        <div class="filters">
+                <h2>Filters</h2>
+                <br>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <p>Price Range</p>
+                        <input type="range" min="0" max="10000" value="0" class="slider" id="priceRange">
+                        <p>₱<span id="priceValue">0</span></p>
+                    </div>
+                    <div class="filter-option">
+                        <p>Distance</p>
+                        <input type="range" min="0" max="10000" value="0" class="slider" id="distanceRange">
+                        <p><span id="distanceValue">0</span> km</p>
+                    </div>
+                    <div class="filter-option ratings">
+                        <p>Rating</p>
+                        <input type="range" min="0" max="5" value="0" class="slider" id>
+                    </div>
+                </div>
+        </div>
+        <div class="dorms-listing">
+            <div class="search-wrapper">
+                <div class="search-bar">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <form class="search-form" action="/search" method="get">
+                        <input class="search-input" type="search" name="q" placeholder="Search dormitories in Dagupan City" spellcheck="false">
+                    </form>
+                </div>
+                <div class="move-dates-wrapper">
+                    <div class="move-dates flex-center">
+                        <p>Move-in Date</p>
+                        <input class="move-input" type="date" name="end-date" id="start-date">
+                    </div>
+                    <div class="move-dates flex-center">
+                        <p>Move-out Date</p>
+                        <input class="move-input" type="date" name="end-date" id="end-date">
+                    </div>
+                    <a class="search-button flex-center" href="#">Search</a>
+                </div>
+            </div>
+            <div class="dorm-card">
+                <div class="dorms-image"></div>
+                <div class="dorms-info">
+                    <p class="price">from <b>₱0</b> / month</p>
+                    <h2>Dormitory Name</h2>
+                    <p>31 Riofero Road, Arellano St.</p>
+                    <br>
+                    <p class="dorms-p">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesentium voluptatum deleniti atque corrupti quos mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    <a class="btn-two" href="dorm-info.html">View</a>
+                </div>
+            </div>
+            <div class="dorm-card">
+                <div class="dorms-image"></div>
+                <div class="dorms-info">
+                    <p class="price">from <b>₱0</b> / month</p>
+                    <h2>Dormitory Name</h2>
+                    <p>31 Riofero Road, Arellano St.</p>
+                    <br>
+                    <p class="dorms-p">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesentium voluptatum deleniti atque corrupti quos mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    <a class="btn-two" href="dorm-info.html">View</a>
+                </div>
+            </div>
+            <div class="dorm-card">
+                <div class="dorms-image"></div>
+                <div class="dorms-info">
+                    <p class="price">from <b>₱0</b> / month</p>
+                    <h2>Dormitory Name</h2>
+                    <p>31 Riofero Road, Arellano St.</p>
+                    <br>
+                    <p class="dorms-p">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesentium voluptatum deleniti atque corrupti quos mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    <a class="btn-two" href="dorm-info.html">View</a>
+                </div>
+            </div>
+            <div class="dorm-card">
+                <div class="dorms-image"></div>
+                <div class="dorms-info">
+                    <p class="price">from <b>₱0</b> / month</p>
+                    <h2>Dormitory Name</h2>
+                    <p>31 Riofero Road, Arellano St.</p>
+                    <br>
+                    <p class="dorms-p">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesentium voluptatum deleniti atque corrupti quos mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    <a class="btn-two" href="dorm-info.html">View</a>
+                </div>
+            </div>
+            <div class="dorm-card">
+                <div class="dorms-image"></div>
+                <div class="dorms-info">
+                    <p class="price">from <b>₱0</b> / month</p>
+                    <h2>Dormitory Name</h2>
+                    <p>31 Riofero Road, Arellano St.</p>
+                    <br>
+                    <p class="dorms-p">At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                        blanditiis praesentium voluptatum deleniti atque corrupti quos mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    <a class="btn-two" href="dorm-info.html">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="dev-name">© BIT5</p>
+        <ul class="footer-list flex-center">
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+        </ul>
+    </footer>
+</body>
+</html>
