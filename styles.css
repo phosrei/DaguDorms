@@ -557,7 +557,6 @@ input[type="search"]::-webkit-search-cancel-button {
   gap: 8px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding: 0 24px;
 
   ::-webkit-scrollbar {
     display: none;
@@ -569,7 +568,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .carousel .item {
   flex: 0 0 auto;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   background-color: #E4EAF2;
   width: 420px;
   height: 250px;

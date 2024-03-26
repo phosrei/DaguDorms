@@ -12,13 +12,15 @@
 	<script>
 	document.addEventListener('DOMContentLoaded', function() {
 		let items = document.querySelectorAll('.item');
-		let currentIndex = 0;
+		let currentIndex = 1;
+
+		items[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 
 		document.getElementById('prev').addEventListener('click', function() {
 			if (currentIndex > 0) {
 				currentIndex--;
 			} else {
-				currentIndex = items.length - 1; // Loop back to the last item
+				currentIndex = items.length - 1;
 			}
 			items[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 		});
@@ -27,7 +29,7 @@
 			if (currentIndex < items.length - 1) {
 				currentIndex++;
 			} else {
-				currentIndex = 0; // Loop back to the first item
+				currentIndex = 0;
 			}
 			items[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 		});
@@ -48,11 +50,11 @@
 	<section class="dorm-info-section flex-center">
 		<button id="prev">Prev</button>
 		<div class="carousel" id="carousel">
+			<div class="item">Item 4</div>
+			<div class="item">Item 5</div>
 			<div class="item">Item 1</div>
 			<div class="item">Item 2</div>
 			<div class="item">Item 3</div>
-			<div class="item">Item 4</div>
-			<div class="item">Item 5</div>
 		</div>
 		<button id="next">Next</button>
 	</section>
