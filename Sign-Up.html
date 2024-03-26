@@ -13,77 +13,70 @@
     <header>
         <a href="index.html">
             <img class="header-icon" src="assets/dagudorms-icon.svg" alt="Header Icon">
-        </a>    
+        </a>
         <nav class="header-nav flex-center">
-            <ul class="header-nav-list flex-center">
-                <li class="header-nav-item flex-center">
-                    <a href="dorms.html" class="header-nav-link flex-center">Dorms</a>
-                </li>
-                <li class="header-nav-item flex-center">
-                    <a href="about.html" class="header-nav-link flex-center">About</a>
-                </li>
-                <li class="header-nav-item flex-center">
-                    <a href="contact.html" class="header-nav-link flex-center">Contact</a>
-                </li>
+            <ul class="header-list flex-center">
+                <li><a href="dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="about.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="contact.html" class="header-nav-link flex-center">Contact</a></li>
             </ul>
         </nav>
     </header>
-        <div class="SignUp-box"> 
-            <div class="sign-up">
+    <section class="sign-up-section flex-center">
+        <div class="sign-up-container flex-center"> 
+            <div class="sign-up-heading">
                 <h2> Sign Up</h2>
+                <br>
                 <p>Make an account to reserve and access other features</p>
-                
             </div>
-        <div class="column">
-            <form class="form-box" action="" method="post">
-                <div class="layout">
-                    <label for="username"> Username</label>
-                    <input class="username" type="text" name="usename" id="username" placeholder="  Enter Username" required>
-                </div>
-
-                <div class="layout">
-                    <label for="First Name"> First Name</label>
-                    <input class="Fname" type="text" name="First Namev" id="First Name" placeholder="  Enter First Name" required>
-                </div>
-
-                <div class="layout">
-                    <label for="Last Name"> Last Name</label>
-                    <input class="Lname" type="text" name="Last Name" id="Last Name" placeholder="  Enter Last Name" required>
-                </div>
-
-                <div class="layout">
-                    <label for="Email Address"> Email Address</label>
-                    <input class="email" type="email" name="Email Address" id="Email Address" placeholder="  Enter Email" required>
-                </div>
-            </form>
-
-            <form class="form-box2" action="" method="post">
-                <div class="layout">
-                    <label for="Phone Number"> Phone Number</label>
-                    <input class="Pnumber" type="" name="Phone Number" id="Phone Number" placeholder="  +63 912 345 6789" required>
-                </div>
-
-                <div class="layout">
-                    <label for="Password"> Password</label>
-                    <input class="pass" type="password" name="Password" id="Password" placeholder="  Enter password" required>
-                </div>
-
-                <div class="layout">
-                    <label for="Confirm Password"> Password</label>
-                    <input class="Cpass" type="password" name="Confirm Password" id="Confirm Password" placeholder="  Confirm Password" required>
-                </div>
-
-                <div class="Sign-up">
-                    <input class="btn" type="submit" name="Sign Up" value="Sign Up" id="Sign Up">
-                </div>
-
-                <div class="link"> 
-                    Already have an account? <a href=""> Sign In?</a>
-                </div>
-            </form>
+            <main class="sign-up-column">
+                <form class="form-container" action="" method="post">
+                    <div class="input-layout">
+                        <label for="username-input">Username</label>
+                        <input class="su-input" type="text" name="usename" id="username-input" placeholder="Enter username" required>
+                    </div>
+                    <div class="input-layout">
+                        <label for="first-name-input"> First Name</label>
+                        <input class="su-input" type="text" name="First Namev" id="first-name-input" placeholder="Enter first name" required>
+                    </div>
+                    <div class="input-layout">
+                        <label for="last-name-input"> Last Name</label>
+                        <input class="su-input" type="text" name="Last Name" id="last-name-input" placeholder="Enter last name" required>
+                    </div>
+                    <div class="input-layout">
+                        <label for="email-input"> Email Address</label>
+                        <input class="su-input" type="email" name="Email Address" id="email-input" placeholder="outlook@gmail.com" required>
+                    </div>
+                </form>
+                <form class="form-container" action="" method="post">
+                    <div class="input-layout">
+                        <label for="phone-num-input">Phone Number</label>
+                        <input class="su-input" type="" name="Phone Number" id="phone-num-input" placeholder="+63 912 345 6789" required>
+                    </div>
+                    <div class="input-layout">
+                        <label for="password-input">Password</label>
+                        <input class="su-input" type="password" name="Password" id="password-input" placeholder="Enter password" required>
+                    </div>
+                    <div class="input-layout">
+                        <label for="confirm-pass">Password</label>
+                        <input class="su-input" type="password" name="Confirm Password" id="confirm-pass" placeholder="Confirm password" required>
+                    </div>
+                    <div class="auth-actions-container">
+                        <a class="sign-up-btn flex-center">Sign Up</a>
+                        <p class="sign-in-link">Already have an account? <a href="">Sign in?</a></p>
+                    </div>
+                </form>
+            </main>
         </div>
-    <footer class="flex-center">
-        <p class="dev-name">BIT5</p>
+    </section>
+    <footer>
+        <p class="dev-name">© BIT5</p>
+        <ul class="footer-list flex-center">
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+        </ul>
     </footer>
 </body>
 </html>

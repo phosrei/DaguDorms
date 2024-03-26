@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  font-family: 'Inter', sans-serif;
   color:#0F1945;
   background-color: #fff;
 }
@@ -185,7 +185,7 @@ header:hover .home-header-icon {
   height: 300px;
 }
 
-.hero-button, .btn-two, .book-btn {
+.hero-btn, .btn-two, .book-btn {
   align-self: center;
   justify-self: center;
   color: #fff;
@@ -195,11 +195,11 @@ header:hover .home-header-icon {
   transition: all 0.3s ease 0s;
 }
 
-.hero-button {
+.hero-btn {
   border: 2px solid #fff;
 }
 
-.hero-button:hover {
+.hero-btn:hover {
   background-color: #fff;
   color: #0F1945;
 }
@@ -346,7 +346,7 @@ footer {
   flex-grow: 1;
 }
 
-.search-input {
+.search-input, .su-input {
   outline: none;
   border: none;
   background-color: inherit;
@@ -371,7 +371,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .move-input {
-  font-family: 'Inter', sans-serif !important;
   border: none;
   outline: none;
   background-color: inherit;
@@ -428,22 +427,20 @@ input[type="search"]::-webkit-search-cancel-button {
   font-weight: 200;
 }
 
-.SignUp-box{
-  display: flex;
-  flex-grow: 1;
-  border: 2px solid #DBDDE1;
-  border-radius: 25px;
-  width: 80%;
-  gap: 16px;
-  margin: 16px 0;
-  align-self: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  flex-direction: column;
-  
+.sign-up-section {
+  margin: 32px 0;
 }
 
-.sign-up{
+.sign-up-container {
+  flex-direction: column;
+  border: 2px solid #DBDDE1;
+  border-radius: 25px;
+  width: 1148px;
+  height: 824px;
+  gap: 90px;
+}
+
+.sign-up {
   display: flex;
   flex: 1;
   flex-direction:column;
@@ -454,99 +451,55 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-bottom: 30px;
 }
 
-.column{
+.sign-up-column {
   display: flex;
-  align-content: center;
-  justify-content: center;
+  align-items: flex-start;
   gap: 80px;
 }
-.form-box{
-  display: inline-block;
-  
-  
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.layout{
+
+.input-layout {
   display: flex;
   justify-content:flex-start;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  
-}
-
-.form-box .layout{
-  display: flex;
-  flex-grow: 1;
-  margin-bottom: 10px;
   flex-direction: column;
   font-weight: 600;
-  
 }
 
-.form-box .username, .Fname, .Lname, .email{
-  height: 45px;
-  width: 400px;
-  border: 1px solid #d78d8d;
-  border-radius: 15px;
-  margin-top: 10px;
-  background-color: rgb(244, 242, 253);
+.auth-actions-container {
   display: flex;
-  flex-grow: 1 ;
-  
-}
-
-.form-box2 {
-  display: inline-block;
-  
-  
-}
-.layout {
-  display: flex;
-  flex-grow: 1;
-  
-  padding-top: 10px;
-  padding-bottom: 10px;
-  
-}
-
-.form-box2 .layout {
-  display: flex;
-  flex-grow: 1;
-  margin-bottom: 10px;
   flex-direction: column;
-  font-weight: 600;
-  
+  margin-top: 20px;
+  gap: 8px;
 }
 
-.form-box2 .Pnumber, .pass, .Cpass {
+.sign-up-btn {
   height: 45px;
-  width: 400px;
-  border: 1px solid #d78d8d;
-  border-radius: 15px;
-  margin-top: 10px;
+  width: 250px;
+  color: #fff;
+  border-radius: 12px;
+  background-color: #3882f6;
+}
+
+.su-input {
+  height: 45px;
+  width: 400px; 
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 12px;
   background-color: rgb(244, 242, 253);
 }
 
-.Sign-up {
-  margin-top: 38px;
-  margin-bottom: 20px;
-  
-}
-.btn {
-  height: 45px;
-  width: 200px;
-  border: 1px solid #d78d8d;
-  border-radius: 15px;
-  margin-top: 10px;
-  background-color: rgb(244, 242, 253);
-  font-weight: 550;
-  font-size: medium;
+.sign-up-heading {
+  text-align: center;
 }
 
-.form-box, .form-box2 {
-  padding-bottom: 100px;
-}
-
-.SignIn-box{
+.SignIn-container{
   display: flex;
   flex-grow: 1;
   border: 2px solid #DBDDE1;
