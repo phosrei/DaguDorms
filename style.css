@@ -455,8 +455,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .column{
   display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   gap: 80px;
