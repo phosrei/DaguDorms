@@ -7,7 +7,6 @@
 
 body {
   display: flex;
-  flex: 1;
   flex-direction: column;
   color:#0E0E10;
   background-color: #fff;
@@ -44,7 +43,7 @@ header {
   background-color: #fff;
 }
 
-.header-position {
+.home-header-position {
   position: absolute;
   z-index: 1000;
 }
@@ -69,6 +68,10 @@ header li a {
   color: #0E0E10;
 }
 
+.home-header-icon {
+  filter: brightness(0) invert(1);
+}
+
 header:hover .home-header-icon {
   filter: brightness(100%)
 }
@@ -76,12 +79,7 @@ header:hover .home-header-icon {
 .header-icon {
   margin: 10px 0;
   height: 30px;
-  width: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.home-header-icon {
-  filter: brightness(0) invert(1);
 }
 
 .header-icon:hover {
@@ -94,6 +92,7 @@ header:hover .home-header-icon {
 }
 
 .header-nav {
+  width: 418px;
   height: 100%;
 }
 
@@ -101,7 +100,7 @@ header:hover .home-header-icon {
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
-  width: 418px;
+  width: 100%;
   height: 100%;
 }
 
@@ -141,8 +140,6 @@ header:hover .home-header-icon {
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to bottom, #00000000, #00000080), url('assets/city.png');
@@ -162,9 +159,10 @@ header:hover .home-header-icon {
 }
 
 .hero-mid {
+  position: relative;
+  bottom: 50px;
   flex-direction: column;
   gap: 10px;
-  margin-top: -100px;
   z-index: 1;
 }
 
@@ -249,12 +247,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 52px;
   padding: 0 140px;
   color: #A88D91;
-  background-color: #EDF2F7;
   border-top: 1px solid #DBDDE1;
 }
+
+.dev-name {
+  font-weight: bolder;
+}
+
 .footer-list {
   list-style: none;
   width: 418px;
@@ -390,6 +393,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border: 2px solid #DBDDE1;
   border-radius: 12px;
   gap: 16px;
+  width: 100%;
   height: 260px;
   margin: 16px 0;
   transition: all 0.3s ease 0s;
@@ -415,11 +419,18 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 12px 0 12px 0;
 }
 
-.btn-two {
+.btn-two, .under-review-btn {
   padding: 8px 32px;
   align-self: flex-end;
   justify-self: flex-end;
   margin-top: auto;
+  border-radius: 24px;
+}
+
+.under-review-btn {
+  background-color: #D5DCE5;
+  color: #0E0E10;
+  opacity: 50%;
 }
 
 .price {
@@ -551,10 +562,11 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .dorm-info-section {
-  display: flex;
-  gap: 16px;
-  margin: 32px 140px;
+  flex-wrap: wrap;
   flex-direction: column;
+  margin: 32px;
+  max-width: 1290px;
+  width: 100%;
 }
 
 .carousel {
@@ -593,6 +605,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .tag-container {
   display: flex;
   flex-wrap: wrap;
+  margin: 16px 0;
   gap: 8px;
 }
 
@@ -608,6 +621,8 @@ input[type="search"]::-webkit-search-cancel-button {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  width: 100%;
+  margin-bottom: 32px;
 }
 
 .dorm-overview-left {
@@ -629,13 +644,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .dorm-heading {
-  border-bottom: 2px solid #DBDDE1;
+  border-bottom: 1px solid #DBDDE1;
   padding: 10px;
 }
 
 .dorm-info-text {
   padding: 10px;
-  border-bottom: 2px solid #DBDDE1;
+  border-bottom: 1px solid #DBDDE1;
 }
 
 .dorm-contact {
@@ -674,4 +689,63 @@ input[type="search"]::-webkit-search-cancel-button {
 .room-card-right {
   display: flex;
   flex-wrap: wrap;
+}
+
+.user-profile-section {
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 32px;
+  max-width: 1290px;
+  width: 100%;
+}
+
+.section-heading {
+  align-self: flex-start;
+  margin: 16px 0;
+}
+
+.user-profile-container {
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 12px;
+  border: 2px solid #DBDDE1;
+}
+
+.user-profile-image {
+  padding: 60px;
+}
+
+.user-left-info {
+  flex-grow: 1;
+}
+
+.user-right-info {
+  flex-grow: 1;
+  width: 620px;
+  height: 320px;
+  flex-direction: column;
+}
+
+.user-info-details * {
+  display: flex;
+  width: 100%;
+}
+
+.user-info-details {
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid #DBDDE1;
+  border-top: 2px solid #DBDDE1;
+}
+
+.name-container {
+  border-top: 0px;
+}
+
+.user-info-value {
+  font-weight: 500;
 }
