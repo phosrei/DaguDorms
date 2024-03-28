@@ -564,7 +564,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .dorm-info-section {
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 32px;
+  padding: 32px;
   max-width: 1290px;
   width: 100%;
 }
@@ -694,7 +694,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .user-profile-section {
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 32px;
+  padding: 32px;
   max-width: 1290px;
   width: 100%;
 }
