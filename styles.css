@@ -298,13 +298,17 @@ footer {
 .filter-options {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 6px;
 }
 
 .filter-option {
   background-color: #fff;
   padding: 8px;
-  border-radius: 12px;
+  border-radius: 12px;  
+}
+
+.checkbox {
+  margin-bottom: 9px;
 }
 
 .move-dates {
@@ -357,6 +361,11 @@ footer {
 
 .auth-input::placeholder, .search-input::placeholder {
   opacity: 0.5;
+}
+
+.dorm-card-root {
+  margin-top: 10px;
+  z-index: 0;
 }
 
 .move-dates-wrapper {
