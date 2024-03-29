@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style>
         @import url('https://fonts.cdnfonts.com/css/inter');
     </style>
@@ -28,31 +29,63 @@
     <section class="dorms-section">
         <div class="filters-container">
                 <h2>Filters</h2>
-                <br>
                 <div class="filter-options">
                     <div class="filter-option">
                         <p>Price Range</p>
                         <input type="range" min="0" max="10000" value="0" class="slider" id="priceRange">
                         <p>₱<span id="priceValue">0</span></p>
                     </div>
-                    <div class="filter-option">
-                        <p>Distance</p>
-                        <input type="range" min="0" max="10000" value="0" class="slider" id="distanceRange">
-                        <p><span id="distanceValue">0</span> km</p>
+                <div class="filter-options">
+                    <div class="filter-option filter-ratings">
+                        <p>Ratings</p>
+                            <input type="range" min="0" max="5.0" value="0" step="0.1" class="slider" id="ratingsRange">
+                            <p><span id="rateValue">0</p>
                     </div>
-                    <div class="filter-option ratings">
-                        <p>Rating</p>
-                        <input type="range" min="0" max="5" value="0" class="slider" id>
+                </div>
+                <h2>Features</h2>
+                    <div class="filter-option filters">
+                        <input type="checkbox" class="checkbox" id="airConditioning" name="airConditioning">
+                        <label for="airConditioning">Air Conditioning</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="elevator" name="elevator">
+                        <label for="elevator">Elevator</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="kitchen" name="kitchen">
+                        <label for="kitchen">Kitchen</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="petsAllowed" name="petsAllowed">
+                        <label for="petsAllowed">Pets Allowed</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="utilities" name="utilities">
+                        <label for="utilities">Utilities Included</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="washingMachine" name="washingMachine">
+                        <label for="washingMachine">Washing Machine</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="wifi" name="wifi">
+                        <label for="wifi">Wi-Fi</label>
+                    </div>
+                <h2>Room Type</h2>
+                    <div class="filter-option filters">
+                        <input type="checkbox" class="checkbox" id="dormRoom" name="dormRoom">
+                        <label for="dormRoom">Dorm Room</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="singleBed" name="singleBed">
+                        <label for="singleBed">Single Bed</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="twoBeds" name="twoBeds">
+                        <label for="twoBeds">Two Beds</label>
+                        <br>
+                        <input type="checkbox" class="checkbox" id="studio" name="studio">
+                        <label for="studio">Studio</label>
                     </div>
                 </div>
         </div>
-        <div class="dorms-listing">
+        <div class="dorms-listing" id="dorms-listing">
             <div class="search-wrapper">
                 <div class="search-bar">
                     <span class="search-icon material-symbols-outlined">search</span>
-                    <form class="search-form" action="/search" method="get">
-                        <input class="search-input" type="search" name="q" placeholder="Search dormitories in Dagupan City" spellcheck="false">
-                    </form>
+                        <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
                 </div>
                 <div class="move-dates-wrapper">
                     <div class="move-dates flex-center">
@@ -63,59 +96,11 @@
                         <p>Move-out Date</p>
                         <input class="move-input" type="date" name="end-date" id="end-date">
                     </div>
-                    <a class="search-button flex-center" href="#">Search</a>
+                    <a class="search-button flex-center" href="#" id="search_button">Search</a>
                 </div>
             </div>
-            <div class="dorm-card">
-                <div class="dorms-image"></div>
-                <div class="dorm-info">
-                    <p class="price">from <b>₱0</b> / month</p>
-                    <h2>Dormitory Name</h2>
-                    <p>31 Riofero Road, Arellano St.</p>
-                    <br>
-                    <a class="btn-two" href="dorm-info.html">View</a>
-                </div>
-            </div>
-            <div class="dorm-card">
-                <div class="dorms-image"></div>
-                <div class="dorm-info">
-                    <p class="price">from <b>₱0</b> / month</p>
-                    <h2>Dormitory Name</h2>
-                    <p>31 Riofero Road, Arellano St.</p>
-                    <br>
-                    <a class="btn-two" href="dorm-info.html">View</a>
-                </div>
-            </div>
-            <div class="dorm-card">
-                <div class="dorms-image"></div>
-                <div class="dorm-info">
-                    <p class="price">from <b>₱0</b> / month</p>
-                    <h2>Dormitory Name</h2>
-                    <p>31 Riofero Road, Arellano St.</p>
-                    <br>
-                    <a class="btn-two" href="dorm-info.html">View</a>
-                </div>
-            </div>
-            <div class="dorm-card">
-                <div class="dorms-image"></div>
-                <div class="dorm-info">
-                    <p class="price">from <b>₱0</b> / month</p>
-                    <h2>Dormitory Name</h2>
-                    <p>31 Riofero Road, Arellano St.</p>
-                    <br>
-                    <a class="btn-two" href="dorm-info.html">View</a>
-                </div>
-            </div>
-            <div class="dorm-card">
-                <div class="dorms-image"></div>
-                <div class="dorm-info">
-                    <p class="price">from <b>₱0</b> / month</p>
-                    <h2>Dormitory Name</h2>
-                    <p>31 Riofero Road, Arellano St.</p>
-                    <br>
-                    <a class="btn-two" href="dorm-info.html">View</a>
-                </div>
-            </div>
+        <div class="dorm-card-root" id="dorm-card-root">
+        </div>
         </div>
     </section>
     <footer>
@@ -127,5 +112,7 @@
             <li>List</li>
         </ul>
     </footer>
+
+    <script src="dorms.js"></script>
 </body>
 </html>
