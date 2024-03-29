@@ -65,7 +65,7 @@ const displayDorm = (items) => {
     dormsListing.innerHTML = items.map((dorm) => {
         var { image, price, title, location } = dorm;
         return (
-            `<div class="dorm-card">
+            `<div class="dorm-card br-12">
                 <img class="dorms-image" src=${image}>
                 <div class="dorm-info">
                     <p class="price">from <b>₱${price}</b> / month</p>

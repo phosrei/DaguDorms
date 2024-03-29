@@ -8,10 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
 
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/inter');
-    </style>
 </head>
 <body>
     <header>
@@ -28,66 +26,79 @@
     </header>
     <section class="dorms-section">
         <div class="filters-container">
-                <h2>Filters</h2>
-                <div class="filter-options">
-                    <div class="filter-option">
-                        <p>Price Range</p>
-                        <input type="range" min="0" max="10000" value="0" class="slider" id="priceRange">
-                        <p>₱<span id="priceValue">0</span></p>
-                    </div>
-                <div class="filter-options">
-                    <div class="filter-option filter-ratings">
-                        <p>Ratings</p>
-                            <input type="range" min="0" max="5.0" value="0" step="0.1" class="slider" id="ratingsRange">
-                            <p><span id="rateValue">0</p>
-                    </div>
+            <section>
+                <h2 class="filters-heading">Filters</h2>
+                <div class="filter-option">
+                    <label for="priceRange">Price Range</label>
+                    <input type="range" min="0" max="10000" value="0" class="slider" id="priceRange">
+                    <p>₱<span id="priceValue">0</span></p>
                 </div>
-                <h2>Features</h2>
-                    <div class="filter-option filters">
-                        <input type="checkbox" class="checkbox" id="airConditioning" name="airConditioning">
-                        <label for="airConditioning">Air Conditioning</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="elevator" name="elevator">
-                        <label for="elevator">Elevator</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="kitchen" name="kitchen">
-                        <label for="kitchen">Kitchen</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="petsAllowed" name="petsAllowed">
-                        <label for="petsAllowed">Pets Allowed</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="utilities" name="utilities">
-                        <label for="utilities">Utilities Included</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="washingMachine" name="washingMachine">
-                        <label for="washingMachine">Washing Machine</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="wifi" name="wifi">
-                        <label for="wifi">Wi-Fi</label>
-                    </div>
-                <h2>Room Type</h2>
-                    <div class="filter-option filters">
-                        <input type="checkbox" class="checkbox" id="dormRoom" name="dormRoom">
-                        <label for="dormRoom">Dorm Room</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="singleBed" name="singleBed">
-                        <label for="singleBed">Single Bed</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="twoBeds" name="twoBeds">
-                        <label for="twoBeds">Two Beds</label>
-                        <br>
-                        <input type="checkbox" class="checkbox" id="studio" name="studio">
-                        <label for="studio">Studio</label>
-                    </div>
+                <div class="filter-option">
+                    <label for="ratingsRange">Ratings</label>
+                    <input type="range" min="0" max="5.0" value="0" step="0.1" class="slider" id="ratingsRange">
+                    <p><span id="rateValue">0</span></p>
                 </div>
+            </section>
+            <hr class="filters-divider">
+            <section class="filter-options">
+                <h2 class="filters-heading">Features</h2>
+                <div>
+                    <input type="checkbox" class="checkbox" id="airConditioning" name="airConditioning">
+                    <label for="airConditioning">Air Conditioning</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="elevator" name="elevator">
+                    <label for="elevator">Elevator</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="kitchen" name="kitchen">
+                    <label for="kitchen">Kitchen</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="petsAllowed" name="petsAllowed">
+                    <label for="petsAllowed">Pets Allowed</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="utilities" name="utilities">
+                    <label for="utilities">Utilities Included</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="washingMachine" name="washingMachine">
+                    <label for="washingMachine">Washing Machine</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="wifi" name="wifi">
+                    <label for="wifi">Wi-Fi</label>
+                </div>
+            </section>
+            <hr class="filters-divider">
+            <section class="filter-options">
+                <h2 class="filters-heading">Room Type</h2>
+                <div>
+                    <input type="checkbox" class="checkbox" id="dormRoom" name="dormRoom">
+                    <label for="dormRoom">Dorm Room</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="singleBed" name="singleBed">
+                    <label for="singleBed">Single Bed</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="twoBeds" name="twoBeds">
+                    <label for="twoBeds">Two Beds</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="studio" name="studio">
+                    <label for="studio">Studio</label>
+                </div>
+            </section>
         </div>
         <div class="dorms-listing" id="dorms-listing">
             <div class="search-wrapper">
-                <div class="search-bar">
+                <div class="search-bar br-12">
                     <span class="search-icon material-symbols-outlined">search</span>
                         <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
                 </div>
-                <div class="move-dates-wrapper">
+                <div class="move-dates-wrapper br-12">
                     <div class="move-dates flex-center">
                         <p>Move-in Date</p>
                         <input class="move-input" type="date" name="end-date" id="start-date">
@@ -112,7 +123,6 @@
             <li>List</li>
         </ul>
     </footer>
-
     <script src="dorms.js"></script>
 </body>
 </html>

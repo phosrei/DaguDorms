@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	<title>DaguDorms</title>
-  	<link rel="stylesheet"  href="user-welcome.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
 </head>
 <body>
-  	<main class="user-welcome-main">
-        <div class="header3">
-                <div class="icon">
-                  <a href="index.html"><img src="assets/dagudorms-icon.svg" class="icon"></a>
-                </div>
-                <div class="nav-links">
-                      <a class="dorms" href="#">Dorms</a>
-                      <a class="dorms" href="#">About Us</a>
-                      <a class="dorms" href="#">FAQ</a>
-                      <button class="hamburger-menu">&#9776</button>
-                </div>
-                <input type="text" class="search-bar2" name="search-bar" placeholder="Search dorms in Dagupan">	
-        </div>
-
-    	<div class="user-welcome-container">
-      		<img class="account-icon2" alt="" src="assets/Account Icon.svg">
-      			
+    <header>
+        <a href="index.html">
+            <img class="header-icon" src="assets/dagudorms-icon.svg" alt="Header Icon">
+        </a> 
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="dorms.html" class="flex-center">Dorms</a></li>
+                <li><a href="about.html" class="flex-center">About</a></li>
+                <li><a href="contact.html" class="flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="user-welcome-section flex-center">
+        <div class="user-welcome-container flex-center br-12">
+            <img class="account-icon2" alt="" src="assets/user-profile-icon.svg">
+      	    <span class="username">@username</span>
       		<h2 class="welcome-user">Welcome user!</h2>
       		<p class="you-now-have">You now have access to these features:</p>
       		<div class="user-features-wrapper">
@@ -35,19 +34,8 @@
                     <li>Reviews</li>
                 </ul>
       		</div>
-      		<button class="get-started-btn">Get Started</button>
-      	    <span class="username">@username</span>
-    	</div>
-
-        <div class="footer">
-            <span class="bit5">© BIT5</span>
-            <div class="list-parent">
-                <span class="list">List</span>
-                <span class="list">List</span>
-                <span class="list">List</span>
-                <span class="list">List</span>
-            </div>
+      		<a href="index.html" class="get-started-btn">Get Started</a>
         </div>
-  	</main>
+    </div>
 </body>
 </html>
