@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+main {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 1076px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    color: #0F1945;
+    font-family: 'Inter';
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.header3 {
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #c6c4c4;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    font-size: 16px;
+    z-index: 999;
+    display: flex;
+}
+.icon {
+    position: absolute;
+    top: 7px;
+    left: 80px;
+    width: 30.63px;
+    height: 35px;
+    display: flex;
+}
+.nav-links {
+    position: absolute;
+    top: 6px;
+    left: 882px;
+    width: 418px;
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    display: flex;
+}
+.dorms {
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+    color:#0F1945;
+    display: flex;
+}
+.hamburger-menu {
+    display: none;
+}
+.search-bar2 {
+    position: absolute;
+    top: 13px;
+    left: 211px;
+    border-radius: 12px;
+    background-color: #e4eaf2;
+    width: 417px;
+    height: 37px;
+    border: 0px;
+    font-size: 14px;
+    color: #0F1945;
+    padding: 8px;
+    display: flex;
+}
+
+.username {
+    position: absolute;
+    top: 237px;
+    left: 191px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+}
+.user-welcome-container {
+    position: absolute;
+    top: 132px;
+    left: 483px;
+    border-radius: 24px;
+    border: 1px solid #c6c4c4;
+    box-sizing: border-box;
+    width: 474px;
+    height: 824px;
+    overflow: hidden;
+    display: flex;
+}
+.account-icon2 {
+    position: absolute;
+    top: 81px;
+    left: 165px;
+    width: 144px;
+    height: 144px;
+    display: flex;
+}
+.welcome-user {
+    position: absolute;
+    top: 266px;
+    left: 67px;
+    font-size: 48px;
+    font-weight: 500;
+    display: flex;
+}
+.you-now-have {
+    position: absolute;
+    top: 334px;
+    left: 87px;
+    font-weight: 500;
+    display: flex;
+}
+.user-features-wrapper {
+    position: absolute;
+    top: 402px;
+    left: 87px;
+    display: flex;
+}
+.user-features-list {
+    font-family: inherit;
+    padding-left: 21px;
+}
+.user-features-list li {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.get-started-btn {
+    position: absolute;
+    top: 695px;
+    left: 146px;
+    border: 0px;
+    border-radius: 12px;
+    background-color: #edf2f7;
+    font-family: inherit;
+    font-size: 16px;
+    color:#0F1945;
+    padding: 16px 46px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+}
+.get-started-btn:hover {
+    background-color: #dce0e4;
+}
+
+
+
+
+.footer {
+    position: absolute;
+    top: 1024px;
+    left: 0px;
+    background-color: #edf2f7;
+    border-top: 1px solid #c6c4c4;
+    box-sizing: border-box;
+    width: 1440px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 140px;
+    display: flex;
+}
+.list-parent {
+    width: 418px;
+    height: 52px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    box-sizing: border-box;
+}
+.bit5 {
+    position: relative;
+}
+.list {
+    position: relative;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 550px) {
+    .icon {
+        left: 10px;
+    }
+    .search-bar2 {
+        display: none;
+    }
+    .nav-links {
+        left: 0px;
+        width: 500px;
+    }
+    .dorms {
+        display: none;
+    }
+    .account-icon {
+        position: absolute;
+        left: 395px;
+    }
+    .hamburger-menu {
+        width: 35px;
+        height: 35px;
+        border: 0px;
+        background-color: #fff;
+        color:#0F1945;
+        font-size: 25px;
+        left: 440px;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bit5 {
+        position: absolute;
+        left: 20px;
+    }
+    .list {
+        display: none;
+    }
+  
+    .user-welcome-container {
+        width: 395px;
+        left: 50px;
+    }
+    .account-icon2 {
+        left: 122px;
+    }
+    .username {
+        left: 146px;
+    }
+    .welcome-user {
+        font-size: 35px;
+    }
+    .you-now-have {
+        font-size: 14px;
+        top: 310px;
+        left: 61px;
+    }
+    .get-started-btn {
+        left: 106px;
+    }
+  }
+  
