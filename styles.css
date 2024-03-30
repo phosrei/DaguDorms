@@ -193,6 +193,7 @@ header li a {
 }
 
 .auth-btn {
+  align-self: flex-start;
   height: 45px;
   width: 250px;
 }
@@ -551,8 +552,6 @@ input[type="search"]::-webkit-search-cancel-button {
   height: max-content;
   background-color: #A88D91;
 }
-
-
 
 .auth-input {
   height: 45px;
