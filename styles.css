@@ -568,12 +568,12 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: rgb(244, 242, 253);
 }
 
-.auth-prompt {
+.link-style {
   text-decoration: none;
   color: #551a8b;
 }
 
-.auth-actions-container p, .auth-prompt {
+.auth-actions-container p, .link-style {
   font-weight: 300;
 }
 
@@ -798,4 +798,10 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .welcome-user {
   font-size: 32px;
+}
+
+.webpage-wip-section {
+  flex-direction: column;
+  height: 100vh;
+  gap: 16px;
 }
