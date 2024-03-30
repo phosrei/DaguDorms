@@ -47,12 +47,9 @@ document.querySelectorAll('.checkbox').forEach(checkbox => {
 });
 
 // Search Bar
-const categories = [...new Set(dorms.map((dorm)=> {return dorm}))]
+const searchBar = document.getElementById('search_bar');
 
-const searchButton = document.getElementById('search_button');
-
-searchButton.addEventListener('click', () => {
-    const searchBar = document.getElementById('search_bar');
+searchBar.addEventListener('input', () => {
     const searched = searchBar.value.toLowerCase();
     const filtered = dorms.filter((dorm) => {
         return dorm.title.toLowerCase().includes(searched);
