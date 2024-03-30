@@ -52,7 +52,7 @@ const searchBar = document.getElementById('search_bar');
 searchBar.addEventListener('input', () => {
     const searched = searchBar.value.toLowerCase();
     const filtered = dorms.filter((dorm) => {
-        return dorm.title.toLowerCase().includes(searched);
+        return dorm.title.toLowerCase().includes(searched) || dorm.tags.some(tag => tag.toLowerCase().includes(searched));
     });
     displayDorm(filtered);
 });
