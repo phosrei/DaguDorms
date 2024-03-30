@@ -4,18 +4,18 @@ const dorms = [
         id: 0,
         image: '',
         price: 0,
-        title: 'Dormitory Name 1',
+        title: 'DaguDorms',
         location: '31 Riofero Road, Arellano St.',
-        tags: ['airConditioning', 'wifi', 'dormRoom']
+        details: 'Testing purposes only',
+        room_image: '',
+        room_name: 'Room',
+        room_details: 'Test',
+        contactNum: '+63 995 724 5708',
+        email: 'dagudorms@email.com',
+        facebook: 'dagudorms',
+        filters: ['airConditioning', 'wifi', 'dormRoom'],
+        tags: ['Air Conditioning', 'Wi-Fi', 'Dorm Room']
     },
-    {
-        id: 1,
-        image: '',
-        price: 0,
-        title: 'Dormitory Name 2',
-        location: '31 Riofero Road, Arellano St.',
-        tags: ['kitchen', 'utilities', 'studio']
-    }
 ]
 
 // Price and Ratings Filter
@@ -60,20 +60,22 @@ searchBar.addEventListener('input', () => {
 const displayDorm = (items) => {
     const dormsListing = document.getElementById('dorm-card-root');
     dormsListing.innerHTML = items.map((dorm) => {
-        var { image, price, title, location } = dorm;
+        var { id, image, price, title, location, details, room_image, room_name, room_details, contactNum, email, facebook, tags } = dorm;
+        const encodedTags = tags.map(tag => encodeURIComponent(tag)).join(',');
+
         return (
-            `<div class="dorm-card br-12">
+            `<div class="dorm-card">
                 <img class="dorms-image" src=${image}>
                 <div class="dorm-info">
                     <p class="price">from <b>₱${price}</b> / month</p>
                     <h2>${title}</h2>
                     <p>${location}</p>
-                    <br>
-                    <a class="btn-two" href="dorm-info.html">View</a>
+                    <a class="btn-two" href="dorm-info.html?id=${id}&title=${encodeURIComponent(title)}&price=${price}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}&room_image=${encodeURIComponent(room_image)}&room_name=${encodeURIComponent(room_name)}&room_details=${encodeURIComponent(room_details)}&contactNum=${encodeURIComponent(contactNum)}&email=${encodeURIComponent(email)}&facebook=${encodeURIComponent(facebook)}&tags=${encodedTags}">View</a>
                 </div>
             </div>`
         );
     }).join('');
 };
+
 
 displayDorm(dorms);
