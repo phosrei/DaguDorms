@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaguDorms</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+</head>
+<body class="sign-in-body">
+    <header class="hover-header">
+        <a href="#">
+            <img class="hover-header-icon header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+        </a> 
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="pages/dorms.html" class="flex-center">Dorms</a></li>
+                <li><a href="pages/page-wip.html" class="flex-center">About</a></li>
+                <li><a href="pages/page-wip.html" class="flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="auth-section flex-center">
+        <div class="auth-container">
+            <div class="auth-left flex-center"> 
+                <div class="auth-heading">
+                    <h1>Sign In</h1>
+                    <br>
+                    <p>Log in to reserve and access other features</p>
+                </div>
+                <form class="auth-form flex-center">
+                    <div class="input-layout">
+                        <label class="input-label" for="si-username-input">Username</label>
+                        <input class="auth-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter username" required>
+                    </div>
+                    <div class="input-layout">
+                        <label class="input-label" for="si-pw-input">Password</label>
+                        <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
+                    </div>
+                    <div class="input-layout-bottom">
+                        <div>
+                            <input type="checkbox" class="checkbox" id="remember-me" name="remember-me">
+                            <label class="remember-me" for="remember-me">Remember me</label>
+                        </div>
+                        <a class="link-style forgot-pw" href="forgot-pw.html">Forgot password?</a>
+                    </div>
+                </form>
+                <a class="auth-btn flex-center" href="../index.html">Sign in</a>
+                <p>Don't have an account? <a class="link-style" href="sign-up.html">Sign up</a></p>
+            </div>
+            <div class="auth-right"></div>
+        </div>
+    </div>
+</body>
+</html>
