@@ -541,6 +541,13 @@ input[type="search"]::-webkit-search-cancel-button {
   font-weight: 600;
 }
 
+.input-layout-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+  font-weight: 300;
+}
+
 .auth-actions-container {
   display: flex;
   flex-direction: column;
