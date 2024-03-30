@@ -93,21 +93,26 @@
             </section>
         </div>
         <div class="dorms-listing" id="dorms-listing">
-            <div class="search-wrapper">
+            <div class="search-container">
                 <div class="search-bar br-12">
                     <span class="search-icon material-symbols-outlined">search</span>
-                        <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
+                    <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
                 </div>
                 <div class="move-dates-wrapper br-12">
-                    <div class="move-dates flex-center">
-                        <p>Move-in Date</p>
-                        <input class="move-input" type="date" name="end-date" id="start-date">
+                    <div class="move-date-container flex-center" style="border-right: 2px solid #DBDDE1">
+                        <img class="calendar-icon" src="assets/calendar-icon.svg" alt="Calendar Icon">
+                        <div class="move-date flex-center">
+                            <p>Move-in Date</p>
+                            <input class="move-input" type="date" name="end-date" id="start-date">
+                        </div>
                     </div>
-                    <div class="move-dates flex-center">
-                        <p>Move-out Date</p>
-                        <input class="move-input" type="date" name="end-date" id="end-date">
+                    <div class="move-date-container flex-center">
+                        <img class="calendar-icon" src="assets/calendar-icon.svg" alt="Calendar Icon">
+                        <div class="move-date flex-center">
+                            <p>Move-out Date</p>
+                            <input class="move-input" type="date" name="end-date" id="end-date">
+                        </div>
                     </div>
-                    <a class="search-button flex-center" href="#" id="search_button">Search</a>
                 </div>
             </div>
         <div class="dorm-card-root" id="dorm-card-root">
