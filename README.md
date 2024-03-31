@@ -1,2 +1,2 @@
 # web-project-hci
-Website project for HCI (Temporary repo name)
+DaguDorms - the website to help you find dorms in Dagupan!
