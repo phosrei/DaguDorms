@@ -81,6 +81,7 @@
             </div>
         </div>
 
+        <a href="user-profile-edit.php">Edit Profile</a>
         <a href="sign-out.php">Log Out</a>
     </section>
     <footer>

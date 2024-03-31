@@ -2,40 +2,32 @@
     session_start();
 
     include("../assets/php/config.php");
-    if (isset($_SESSION["id"]) && $_SESSION["username"]) {
-        header("location: ../pages/sign-out.php");
-    }  
-    else {
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $username = $_POST['username'];
-            $firstName = $_POST['firstName'];
-            $lastName = $_POST['lastName'];
-            $email = $_POST['email'];
-            $telephone = $_POST['telephone'];
-            $password = $_POST['password'];
+    
+    if (!isset($_SESSION["id"]) || !isset($_SESSION["username"])) {
+        header("location: ../pages/sign-up.php");
+        exit;
+    }
+    
+    $id = $_SESSION["id"];
+    
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $username = mysqli_real_escape_string($con, $_POST["username"]);
+        $firstName = mysqli_real_escape_string($con, $_POST["firstName"]);
+        $lastName = mysqli_real_escape_string($con, $_POST["lastName"]);
+        $email = mysqli_real_escape_string($con, $_POST["email"]);
+        $telephone = mysqli_real_escape_string($con, $_POST["telephone"]);
 
-            $verify_user = mysqli_query($con, "SELECT username, email FROM form WHERE username='$username' AND email='$email");
+        $update_query = "UPDATE form SET username='$username', firstName='$firstName', lastName='$lastName', email='$email', telephone='$telephone' WHERE id='$id'";
+        mysqli_query($con, $update_query);
 
-            if (mysqli_num_rows($verify_user) != 0) {
-                echo '<script type="text/javascript">alert("Username/Email has been taken, please try again"); window.location.href = "sign-up.php";</script>';
-                exit;
-            } 
-            else {
-                $data = mysqli_fetch_assoc($verify_email);
-                $id = $data['id'];
-                $_SESSION['username'] = $data['username'];
-                $_SESSION['firstName'] = $data['firstName'];
-                $_SESSION['lastName'] = $data['lastName'];
-                $_SESSION['email'] = $data['email'];
-                $_SESSION['telephone'] = $data['telephone'];
-
-                mysqli_query($con, "INSERT INTO form(username, firstName, lastName, email, telephone, password) 
-                    VALUES ('$username', '$firstName', '$lastName', '$email', '$telephone', '$password')");
-                header("location: user-welcome.php");
-                exit;
-            }
-
-        }
+        $_SESSION['username'] = $username;
+        $_SESSION['firstName'] = $firstName;
+        $_SESSION['lastName'] = $lastName;
+        $_SESSION['email'] = $email;
+        $_SESSION['telephone'] = $telephone;
+        
+        echo '<script type="text/javascript">alert("User data updated successfully."); window.location.href = "../pages/user-profile.php";</script>';
+    }
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +55,7 @@
     <section class="auth-section flex-center">
         <div class="auth-container su-container flex-center"> 
             <div class="auth-heading">
-                <h1>Sign Up</h1>
-                <br>
-                <p>Make an account to reserve and access other features</p>
+                <h1>Edit Profile</h1>
             </div>
             <form class="auth-form" action="" method="post">
                 <div class="auth-row">
@@ -92,17 +82,8 @@
                             <label class="input-label" for="su-phone-num-input">Phone Number</label>
                             <input class="auth-input" type="tel" name="telephone" id="telephone" placeholder="+63 912 345 6789" required>
                         </div>
-                        <div class="input-layout">
-                            <label class="input-label" for="su-pw-input">Password</label>
-                            <input class="auth-input" type="password" name="password" id="password" placeholder="Enter password" required>
-                        </div>
-                        <div class="input-layout">
-                            <label class="input-label" for="confirm-pw">Confirm Password</label>
-                            <input class="auth-input" type="password" name="confirm-pw" id="confirm-pw" placeholder="Confirm password" required>
-                        </div>
                         <div class="auth-actions-container">
-                            <input class="auth-btn si-auth-btn flex-center" type="submit" name="sign-up" value="Sign Up" id="sign-up">
-                            <p>Already have an account? <a class="link-style" href="sign-in.php">Sign in</a></p>
+                            <input class="auth-btn si-auth-btn flex-center" type="submit" name="update-profile" value="Update Profile" id="update-profile">
                         </div>
                     </div>
                 </div>
@@ -111,4 +92,3 @@
     </section>
 </body>
 </html>
-<?php } ?>

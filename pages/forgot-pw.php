@@ -95,8 +95,24 @@
                         </div>
                     </div>
             </form>
-            <button class="eye-btn"><img src="../assets/images/see_password_button.png"></button>
+            <button class="eye-btn"><img class="eye-icon" id="eye-icon" src="../assets/images/see_password_button.png" onclick="pass()"></button>
         </div>
     </section>
+
+    <script>
+        var a;
+        function pass() {
+            var passwordInput = document.getElementById("new-password");
+            if (a == 1) {
+                passwordInput.type = "password";
+                document.getElementById("eye-icon").src = "../assets/images/see_password_button.png";
+                a = 0;
+            } else {
+                passwordInput.type = "text";
+                document.getElementById("eye-icon").src = "../assets/images/hide_password_button.png";
+                a = 1;
+            }
+        }
+    </script>
 </body>
 </html>

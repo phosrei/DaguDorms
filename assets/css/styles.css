@@ -218,6 +218,11 @@ header li a {
   position: absolute;
 }
 
+.eye-icon {
+  height: 40px;
+  width: 40px;
+}
+
 .auth-actions-container {
   display: flex;
   margin-top: 25px;

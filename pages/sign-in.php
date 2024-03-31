@@ -4,7 +4,6 @@
     include("../assets/php/config.php");
 
     if (isset($_SESSION["id"]) && $_SESSION["username"]) {
-        include("../assets/php/config.php");
         header("location: ../pages/sign-out.php");
     }  
     else {
