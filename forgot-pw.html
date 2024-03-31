@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<title>DaguDorms</title>
+  	<link rel="stylesheet"  href="../assets/css/styles.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="pages/dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="pages/page-wip.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="pages/page-wip.html" class="header-nav-link flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="auth-section flex-center">
+        <div class="auth-container su-container flex-center"> 
+            <div class="auth-heading">
+                <h1>Forgot Password</h1>
+            </div>
+            <form class="auth-form" action="" method="post">
+                    <div class="auth-column">
+                        <div class="input-layout">
+                            <label class="input-label" for="email">Email</label>
+                            <input class="auth-input" type="text" name="email" id="email" placeholder="outlook@gmail.com" required>
+                        </div>
+                        <div class="input-layout">
+                            <label class="input-label" for="new-password">New Password</label>
+                            <input class="auth-input" type="text" name="new-password" id="new-password" placeholder="Enter Password" required>
+                        </div>
+                        <div class="input-layout">
+                            <label class="input-label" for="confirm-password">Confirm Password</label>
+                            <input class="auth-input" type="text" name="confirm-password" id="confirm-password" placeholder="Enter Password" required>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="auth-actions-container">
+                            <input class="auth-btn si-auth-btn flex-center" type="submit" name="sign-up" value="Reset Password" id="sign-up">
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
