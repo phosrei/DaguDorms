@@ -1070,7 +1070,7 @@ header li a {
   position: relative;
 }
 
-.header-list li::after {
+.header-list .anim-under::after {
   content: '';
   position: absolute;
   bottom: -2px;

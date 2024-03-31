@@ -21,18 +21,65 @@
     <header>
         <a href="../index.html">
             <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
-        </a>
+        </a> 
         <nav class="header-nav flex-center">
             <ul class="header-list flex-center">
-                <li><a href="../pages/dorms.html" class="header-nav-link flex-center">Dorms</a></li>
-                <li><a href="../pages/page-wip.html" class="header-nav-link flex-center">About</a></li>
-                <li><a href="../pages/page-wip.html" class="header-nav-link flex-center">Contact</a></li>
+                <li class="anim-under"><a href="../index.html" class="flex-center">Home</a></li>
+                <li class="anim-under"><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+                <li class="dropdown flex-center">
+                    <button class="dropdown-button flex-center" onclick="toggleDropdown()">
+                        <img src="../assets/images/dropdown-icon.svg">
+                    </button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <div class="dropdown-heading">
+                            <div class="dropdown-heading-left flex-center">
+                                <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
+                                <div>
+                                    <a class="dropdown-heading-btn" href="sign-in.html">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-heading-right flex-center">
+                                <button id="close-button" class="close-button">
+                                    <img class="close-icon" src="../assets/images/close-icon.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dropdown-main flex-center">
+                            <hr>
+                            <a href="user-profile.html">
+                                <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
+                                Your profile
+                            <a href="link1">
+                                <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
+                                Add account
+                            </a>
+                            <hr>
+                            <a href="#link2">
+                                <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
+                                Reservations
+                            </a>
+                            <a href="/pages/page-wip.html">
+                                <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
+                                Submissions
+                            </a>
+                            <a href="#link3">
+                                <img class="dd-main-icon" src="../assets/images/team-icon.svg">
+                                About Us
+                            </a>
+                            <a href="#link3">
+                                <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
+                                FAQ
+                            </a>
+                            <hr>
+                            <a href="#link3">Sign Out</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
     <section class="user-profile-section">
         <h1 class="section-heading">Your Info</h1>
-        
         <div class="user-profile-container flex-center br-12">
             <div class="user-left-info flex-center">
                 <div class="user-profile-image">
@@ -42,19 +89,19 @@
             <div class="user-right-info flex-center">
                 <div class="user-info-details flex-center btop-0">
                     <span class="user-info-label">Full Name</span>
-                    <span class="user-info-value"><?php echo $_SESSION['firstName'] ?> <?php echo $_SESSION['lastName'] ?></span>
+                    <span class="user-info-value">John Doe Napakagwapo</span>
                 </div>
                 <div class="user-info-details flex-center">
                     <span class="user-info-label">Username</span>
-                    <span class="user-info-value"><?php echo $_SESSION['username']?></span>
+                    <span class="user-info-value">username</span>
                 </div>
                 <div class="user-info-details flex-center">
                     <span class="user-info-label">Phone number</span>
-                    <span class="user-info-value"><?php echo $_SESSION['telephone']?></span>
+                    <span class="user-info-value">+63 901 234 5678</span>
                 </div>
                 <div class="user-info-details flex-center">
                     <span class="user-info-label">Email</span>
-                    <span class="user-info-value"><?php echo $_SESSION['email']?></span>
+                    <span class="user-info-value">outlook@gmail.com</span>
                 </div>
             </div> 
         </div>
@@ -66,7 +113,7 @@
                 <h2>Dormitory Name</h2>
                 <p>31 Riofero Road, Arellano St.</p>
                 <br>
-                <a class="btn-two" href="page-wip.html">View</a>
+                <a class="btn-two" href="dorm-info.html">View</a>
             </div>
         </div>
         <h1 class="section-heading">Your Submission</h1>
@@ -80,9 +127,6 @@
                 <p class="under-review-btn" href="dorm-info.html">Under Review</p>
             </div>
         </div>
-
-        <a href="user-profile-edit.php">Edit Profile</a>
-        <a href="sign-out.php">Log Out</a>
     </section>
     <footer>
         <p class="dev-name">© BIT5</p>
@@ -93,10 +137,7 @@
             <li>List</li>
         </ul>
     </footer>
-
-    <script>
-
-    </script>
+    <script src="../assets/js/dropdown.js"></script>
 </body>
 </html>
 

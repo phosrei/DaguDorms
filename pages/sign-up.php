@@ -51,12 +51,60 @@
     <header>
         <a href="../index.html">
             <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
-        </a>
+        </a> 
         <nav class="header-nav flex-center">
             <ul class="header-list flex-center">
-                <li><a href="pages/dorms.html" class="header-nav-link flex-center">Dorms</a></li>
-                <li><a href="pages/page-wip.html" class="header-nav-link flex-center">About</a></li>
-                <li><a href="pages/page-wip.html" class="header-nav-link flex-center">Contact</a></li>
+                <li class="anim-under"><a href="../index.html" class="flex-center">Home</a></li>
+                <li class="anim-under"><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+                <li class="dropdown flex-center">
+                    <button class="dropdown-button flex-center" onclick="toggleDropdown()">
+                        <img src="../assets/images/dropdown-icon.svg">
+                    </button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <div class="dropdown-heading">
+                            <div class="dropdown-heading-left flex-center">
+                                <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
+                                <div>
+                                    <a class="dropdown-heading-btn" href="sign-in.html">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-heading-right flex-center">
+                                <button id="close-button" class="close-button">
+                                    <img class="close-icon" src="../assets/images/close-icon.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dropdown-main flex-center">
+                            <hr>
+                            <a href="user-profile.html">
+                                <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
+                                Your profile
+                            <a href="link1">
+                                <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
+                                Add account
+                            </a>
+                            <hr>
+                            <a href="#link2">
+                                <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
+                                Reservations
+                            </a>
+                            <a href="/pages/page-wip.html">
+                                <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
+                                Submissions
+                            </a>
+                            <a href="#link3">
+                                <img class="dd-main-icon" src="../assets/images/team-icon.svg">
+                                About Us
+                            </a>
+                            <a href="#link3">
+                                <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
+                                FAQ
+                            </a>
+                            <hr>
+                            <a href="#link3">Sign Out</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -72,43 +120,44 @@
                     <div class="auth-column">
                         <div class="input-layout">
                             <label class="input-label" for="username-input">Username</label>
-                            <input class="auth-input" type="text" name="username" id="username" placeholder="Enter username" required>
+                            <input class="auth-input" type="text" name="Username" id="username-input" placeholder="Enter username" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-firstn-input">First Name</label>
-                            <input class="auth-input" type="text" name="firstName" id="firstName" placeholder="Enter first name" required>
+                            <input class="auth-input" type="text" name="First Name" id="su-firstn-input" placeholder="Enter first name" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-lastn-input">Last Name</label>
-                            <input class="auth-input" type="text" name="lastName" id="lastName" placeholder="Enter last name" required>
+                            <input class="auth-input" type="text" name="Last Name" id="su-lastn-input" placeholder="Enter last name" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-email-input">Email Address</label>
-                            <input class="auth-input" type="email" name="email" id="email" placeholder="outlook@gmail.com" required>
+                            <input class="auth-input" type="email" name="Email Address" id="su-email-input" placeholder="outlook@gmail.com" required>
                         </div>
                     </div>
                     <div class="auth-column">
                         <div class="input-layout">
                             <label class="input-label" for="su-phone-num-input">Phone Number</label>
-                            <input class="auth-input" type="tel" name="telephone" id="telephone" placeholder="+63 912 345 6789" required>
+                            <input class="auth-input" type="tel" name="Phone Number" id="su-phone-num-input" placeholder="+63 912 345 6789" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-pw-input">Password</label>
-                            <input class="auth-input" type="password" name="password" id="password" placeholder="Enter password" required>
+                            <input class="auth-input" type="password" name="Password" id="su-pw-input" placeholder="Enter password" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="confirm-pw">Confirm Password</label>
-                            <input class="auth-input" type="password" name="confirm-pw" id="confirm-pw" placeholder="Confirm password" required>
+                            <input class="auth-input" type="password" name="Confirm Password" id="confirm-pw" placeholder="Confirm password" required>
                         </div>
                         <div class="auth-actions-container">
-                            <input class="auth-btn si-auth-btn flex-center" type="submit" name="sign-up" value="Sign Up" id="sign-up">
-                            <p>Already have an account? <a class="link-style" href="sign-in.php">Sign in</a></p>
+                            <a class="auth-btn si-auth-btn flex-center" href="user-welcome.html">Sign Up</a>
+                            <p>Already have an account? <a class="link-style" href="sign-in.html">Sign in</a></p>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
     </section>
+    <script src="../assets/js/dropdown.js"></script>
 </body>
 </html>
 <?php } ?>
