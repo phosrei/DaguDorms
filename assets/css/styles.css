@@ -207,6 +207,7 @@ header li a, header li button {
 .header-list, .home-header-list {
   flex: 1;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   height: 100%;
 }
