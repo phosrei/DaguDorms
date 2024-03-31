@@ -338,7 +338,7 @@ footer {
 
 #new-password{
   padding-right: 20px;
-  background: url(eye.svg) no-repeat right;
+  background: url(see_password_button.svg) no-repeat right;
   background-size: 20px;
   background-color: #fcf4f5;
   cursor: text;
