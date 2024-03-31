@@ -513,13 +513,6 @@ input[type="search"]::-webkit-search-cancel-button {
   box-shadow: 0px 0px 8px 0px #D5DCE5;
 }
 
-.auth-container {
-  display: flex;
-  width: 1000px;
-  height: 600px;
-  border-radius: 12px;
-}
-
 .auth-heading {
   text-align: center;
 }
@@ -551,13 +544,19 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-bottom: 30px;
 }
 
-.auth-column {
-  display: flex;
-  align-items: flex-start;
-  gap: 80px;
+.auth-container {
+  width: 1000px;
+  height: 600px;
+  border-radius: 12px;
 }
 
-.auth-form {
+.auth-row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 64px;
+}
+
+.auth-column {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -565,7 +564,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .input-layout {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   justify-content:flex-start;
   flex-direction: column;
   font-weight: 500;
