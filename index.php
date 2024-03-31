@@ -18,7 +18,7 @@
             <img class="hover-header-icon header-icon" src="assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a> 
         <nav class="header-nav flex-center">
-            <ul class="home-header-list flex-center">
+            <ul class="home-header-list">
                 <li class="anim-under"><a href="index.html" class="flex-center">Home</a></li>
                 <li class="anim-under"><a href="pages/dorms.html" class="flex-center">Dorms</a></li>
                 <li class="dropdown flex-center">
