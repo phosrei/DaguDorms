@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	<title>DaguDorms</title>
-	  <link rel="stylesheet" href="../assets/css/styles.css">
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
 </head>
 <body class="flex-center">
     <header>
@@ -68,67 +68,57 @@
             </ul>
         </nav>
     </header>
-	<section class="dorm-info-section">
-		<div class="carousel-container flex-center">
-			<button id="prev" class="slide-btn">&#10094</button>
-			<ul class="carousel" id="carousel">
-				<li class="item"><img src="" id="image"></li>
-				<li class="item">Item 5</li>
-				<li class="item">Item 1</li>
-				<li class="item">Item 2</li>
-				<li class="item">Item 3</li>
-			</ul>
-			<button id="next" class="slide-btn">&#10095</button>
-		</div>
-		<div class="tag-container" id="tags-container">
-		</div>
-		<section class="dorm-overview">
-			<div class="dorm-overview-left">
-				<div class="dorm-heading">
-					<h1 class="dorm-overview-name" id="title">Dormitory Name</h1>
-					<p class="dorm-overview-location" id="location">Dormitory Location</p>
-				</div>
-				<span class="dorm-info-text" id="details">
-					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-					voluptatum deleniti atque corrupti quos mollitia animi, id est laborum et dolorum fuga.
-					Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et
-					iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
-					corrupti quos mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
-					facilis est et expedita distinctio.
-				</span>
-				<div class="dorm-contact">
-					<p class="dorm-contact-info">Email: <span id="email">email</span></p>
-					<p class="dorm-contact-info">Phone: <span id="contactNum">num</span></p>
-					<p class="dorm-contact-info">Social: <span id="facebook">fb</span></p>
-				</div>
-			</div>
-			<div class="dorm-overview-right">
-				<div class="dorm-heading">
-					<h1 class="ratings-text">Ratings: 0★</h1>
-				</div>
-				<div class="google-maps-container">
-				</div>
-			</div>
-		</section>
-		<section class="available-rooms">
-			<h2>Available Rooms</h2>
-			<div class="dorm-card room-card br-12">
-                <img class="dorms-image" id="room_image"></img>
-                <div class="dorm-info">
-                    <h1 id="room_name">Room Name</h1>
-                    <p class="room-card-p" id="room_details">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                        blanditiis praesentium voluptatum deleniti atque corrupti quos mollitia animi,
-						id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-					</p>
+    <section class="user-profile-section">
+        <h1 class="section-heading">Your Info</h1>
+        <div class="user-profile-container flex-center br-12">
+            <div class="user-left-info flex-center">
+                <div class="user-profile-image">
+                    <img src="assets/user-profile-icon.svg" alt="User Profile Image">
                 </div>
-				<div class="room-book flex-center">
-					<p class="price">from <b>₱</b><b id="price">0</b> / month</p>
-					<a class="book-btn" href="dorm-info.html">Book Now</a>
-				</div>
             </div>
-		</section>
-	</section>
-	<footer>
+            <div class="user-right-info flex-center">
+                <div class="user-info-details flex-center btop-0">
+                    <span class="user-info-label">Full Name</span>
+                    <span class="user-info-value">John Doe Napakagwapo</span>
+                </div>
+                <div class="user-info-details flex-center">
+                    <span class="user-info-label">Username</span>
+                    <span class="user-info-value">username</span>
+                </div>
+                <div class="user-info-details flex-center">
+                    <span class="user-info-label">Phone number</span>
+                    <span class="user-info-value">+63 901 234 5678</span>
+                </div>
+                <div class="user-info-details flex-center">
+                    <span class="user-info-label">Email</span>
+                    <span class="user-info-value">outlook@gmail.com</span>
+                </div>
+            </div> 
+        </div>
+        <h1 class="section-heading">Your Reservations</h1>
+        <div class="dorm-card br-12">
+            <div class="dorms-image"></div>
+            <div class="dorm-info">
+                <p class="price">from <b>₱0</b> / month</p>
+                <h2>Dormitory Name</h2>
+                <p>31 Riofero Road, Arellano St.</p>
+                <br>
+                <a class="btn-two" href="dorm-info.html">View</a>
+            </div>
+        </div>
+        <h1 class="section-heading">Your Submission</h1>
+        <div class="dorm-card br-12">
+            <div class="dorms-image"></div>
+            <div class="dorm-info">
+                <p class="price">from <b>₱0</b> / month</p>
+                <h2>Dormitory Name</h2>
+                <p>31 Riofero Road, Arellano St.</p>
+                <br>
+                <p class="under-review-btn" href="dorm-info.html">Under Review</p>
+            </div>
+        </div>
+    </section>
+    <footer>
         <p class="dev-name">© BIT5</p>
         <ul class="footer-list flex-center">
             <li>List</li>
@@ -137,7 +127,6 @@
             <li>List</li>
         </ul>
     </footer>
-	<script src="../assets/js/dorm-info.js"></script>
     <script src="../assets/js/dropdown.js"></script>
 </body>
 </html>

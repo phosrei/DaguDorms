@@ -1,19 +1,11 @@
-<svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Account Icon">
-<g id="Ellipse 46">
-<ellipse cx="18.5" cy="14.111" rx="5.83333" ry="5.83333" stroke="#0E0E10" stroke-linecap="round"/>
-<ellipse cx="18.5" cy="14.111" rx="5.83333" ry="5.83333" stroke="black" stroke-opacity="0.2" stroke-linecap="round"/>
-<ellipse cx="18.5" cy="14.111" rx="5.83333" ry="5.83333" stroke="black" stroke-opacity="0.2" stroke-linecap="round"/>
-</g>
-<g id="Ellipse 47">
-<circle cx="18.5" cy="18" r="17.5" stroke="#0E0E10"/>
-<circle cx="18.5" cy="18" r="17.5" stroke="black" stroke-opacity="0.2"/>
-<circle cx="18.5" cy="18" r="17.5" stroke="black" stroke-opacity="0.2"/>
-</g>
-<g id="Ellipse 48">
-<path d="M30.1667 31.0393C29.4786 28.972 27.9622 27.1453 25.8528 25.8424C23.7434 24.5396 21.1589 23.8334 18.5 23.8334C15.8412 23.8334 13.2567 24.5396 11.1473 25.8424C9.0379 27.1453 7.52153 28.972 6.83337 31.0393" stroke="#0E0E10" stroke-linecap="round"/>
-<path d="M30.1667 31.0393C29.4786 28.972 27.9622 27.1453 25.8528 25.8424C23.7434 24.5396 21.1589 23.8334 18.5 23.8334C15.8412 23.8334 13.2567 24.5396 11.1473 25.8424C9.0379 27.1453 7.52153 28.972 6.83337 31.0393" stroke="black" stroke-opacity="0.2" stroke-linecap="round"/>
-<path d="M30.1667 31.0393C29.4786 28.972 27.9622 27.1453 25.8528 25.8424C23.7434 24.5396 21.1589 23.8334 18.5 23.8334C15.8412 23.8334 13.2567 24.5396 11.1473 25.8424C9.0379 27.1453 7.52153 28.972 6.83337 31.0393" stroke="black" stroke-opacity="0.2" stroke-linecap="round"/>
-</g>
-</g>
+<svg width="164" height="164" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="82.0004" cy="64.2222" rx="26.6667" ry="26.6667" stroke="#0E0E10" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="82.0004" cy="64.2222" rx="26.6667" ry="26.6667" stroke="black" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="82.0004" cy="64.2222" rx="26.6667" ry="26.6667" stroke="black" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round"/>
+<circle cx="82" cy="82" r="80" stroke="#0E0E10" stroke-width="4"/>
+<circle cx="82" cy="82" r="80" stroke="black" stroke-opacity="0.2" stroke-width="4"/>
+<circle cx="82" cy="82" r="80" stroke="black" stroke-opacity="0.2" stroke-width="4"/>
+<path d="M135.333 141.609C132.187 132.158 125.255 123.808 115.612 117.852C105.969 111.896 94.1543 108.667 81.9996 108.667C69.845 108.667 58.0299 111.896 48.387 117.852C38.7441 123.807 31.8121 132.158 28.6663 141.609" stroke="#0E0E10" stroke-width="4" stroke-linecap="round"/>
+<path d="M135.333 141.609C132.187 132.158 125.255 123.808 115.612 117.852C105.969 111.896 94.1543 108.667 81.9996 108.667C69.845 108.667 58.0299 111.896 48.387 117.852C38.7441 123.807 31.8121 132.158 28.6663 141.609" stroke="black" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round"/>
+<path d="M135.333 141.609C132.187 132.158 125.255 123.808 115.612 117.852C105.969 111.896 94.1543 108.667 81.9996 108.667C69.845 108.667 58.0299 111.896 48.387 117.852C38.7441 123.807 31.8121 132.158 28.6663 141.609" stroke="black" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round"/>
 </svg>
