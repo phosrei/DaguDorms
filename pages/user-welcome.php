@@ -87,7 +87,7 @@
                     <li>Reviews</li>
                 </ul>
       		</div>
-      		<a href="../index.html" class="get-started-btn">Get Started</a>
+      		<a href="../index.php" class="get-started-btn">Get Started</a>
         </div>
     </div>
     <script src="../assets/js/dropdown.js"></script>

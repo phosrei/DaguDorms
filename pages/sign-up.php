@@ -49,12 +49,12 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
+        <a href="../index.php">
             <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a> 
         <nav class="header-nav flex-center">
             <ul class="header-list flex-center">
-                <li class="anim-under"><a href="../index.html" class="flex-center">Home</a></li>
+                <li class="anim-under"><a href="../index.php" class="flex-center">Home</a></li>
                 <li class="anim-under"><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
                 <li class="dropdown flex-center">
                     <button class="dropdown-button flex-center" onclick="toggleDropdown()">
@@ -65,7 +65,7 @@
                             <div class="dropdown-heading-left flex-center">
                                 <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
                                 <div>
-                                    <a class="dropdown-heading-btn" href="sign-in.html">Sign In</a>
+                                    <a class="dropdown-heading-btn" href="sign-in.php">Sign In</a>
                                 </div>
                             </div>
                             <div class="dropdown-heading-right flex-center">
@@ -76,7 +76,7 @@
                         </div>
                         <div class="dropdown-main flex-center">
                             <hr>
-                            <a href="user-profile.html">
+                            <a href="user-profile.php">
                                 <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
                                 Your profile
                             <a href="link1">
@@ -149,8 +149,8 @@
                             <input class="auth-input" type="password" name="Confirm Password" id="confirm-pw" placeholder="Confirm password" required>
                         </div>
                         <div class="auth-actions-container">
-                            <a class="auth-btn si-auth-btn flex-center" href="user-welcome.html">Sign Up</a>
-                            <p>Already have an account? <a class="link-style" href="sign-in.html">Sign in</a></p>
+                            <a class="auth-btn flex-center" href="user-welcome.php">Sign Up</a>
+                            <p>Already have an account? <a class="link-style" href="sign-in.php">Sign in</a></p>
                         </div>
                     </div>
                 </div>

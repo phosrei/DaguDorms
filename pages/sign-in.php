@@ -46,12 +46,12 @@
 </head>
 <body class="sign-in-body">
     <header class="hover-header">
-        <a href="../index.html">
+        <a href="../index.php">
             <img class="hover-header-icon header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a> 
         <nav class="header-nav flex-center">
             <ul class="home-header-list flex-center">
-                <li class="anim-under"><a href="../index.html" class="flex-center">Home</a></li>
+                <li class="anim-under"><a href="../index.php" class="flex-center">Home</a></li>
                 <li class="anim-under"><a href="dorms.html" class="flex-center">Dorms</a></li>
                 <li class="dropdown flex-center">
                     <button class="hover-dropdown-button flex-center" onclick="toggleDropdown()">
@@ -62,7 +62,7 @@
                             <div class="dropdown-heading-left flex-center">
                                 <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
                                 <div>
-                                    <a class="dropdown-heading-btn" href="sign-in.html">Sign In</a>
+                                    <a class="dropdown-heading-btn" href="sign-in.php">Sign In</a>
                                 </div>
                             </div>
                             <div class="dropdown-heading-right flex-center">
@@ -73,7 +73,7 @@
                         </div>
                         <div class="dropdown-main flex-center">
                             <hr>
-                            <a href="user-profile.html">
+                            <a href="user-profile.php">
                                 <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
                                 Your profile
                             <a href="link1">
@@ -127,11 +127,11 @@
                             <input type="checkbox" class="checkbox" id="remember-me" name="remember-me">
                             <label class="remember-me" for="remember-me">Remember me</label>
                         </div>
-                        <a class="link-style forgot-pw" href="forgot-pw.html">Forgot password?</a>
+                        <a class="link-style forgot-pw" href="forgot-pw.php">Forgot password?</a>
                     </div>
                 </form>
-                <a class="auth-btn flex-center" href="../index.html">Sign in</a>
-                <p>Don't have an account? <a class="link-style" href="sign-up.html">Sign up</a></p>
+                <a class="auth-btn flex-center" href="../index.php">Sign in</a>
+                <p>Don't have an account? <a class="link-style" href="sign-up.php">Sign up</a></p>
             </div>
             <div class="auth-right"></div>
         </div>
