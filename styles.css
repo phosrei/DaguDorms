@@ -199,6 +199,8 @@ header li a {
   width: 250px;
   border-radius: 12px;
   border: 0px;
+  align-self: center;
+  justify-self: center;
 }
 
 .auth-actions-container {
@@ -329,6 +331,21 @@ footer {
 .auth-input {
   width: 300px;
   border: 1px solid var(--border-color);
+  border-radius: 19px;
+  background-color: #fcf4f5;
+  cursor: text;
+}
+
+#new-password{
+  padding-right: 20px;
+  background: url(eye.svg) no-repeat right;
+  background-size: 20px;
+  background-color: #fcf4f5;
+  cursor: text;
+}
+
+.input-label{
+  font-weight: 800;
 }
 
 .search-input {
@@ -564,6 +581,7 @@ input[type="search"]::-webkit-search-cancel-button {
   justify-content:flex-start;
   flex-direction: column;
   font-weight: 500;
+  border-radius: 25px;
 }
 
 .input-layout-bottom {
