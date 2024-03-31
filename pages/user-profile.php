@@ -1,0 +1,102 @@
+<?php 
+    session_start();
+    
+    if(!isset($_SESSION["id"]) && !isset($_SESSION["username"])) {
+        header("location: ../pages/sign-up.php");
+    }
+    else {
+        include("../assets/php/config.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+</head>
+<body class="flex-center">
+    <header>
+        <a href="../index.html">
+            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="../pages/dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="../pages/page-wip.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="../pages/page-wip.html" class="header-nav-link flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="user-profile-section">
+        <h1 class="section-heading">Your Info</h1>
+        
+        <div class="user-profile-container flex-center br-12">
+            <div class="user-left-info flex-center">
+                <div class="user-profile-image">
+                    <img src="assets/user-profile-icon.svg" alt="User Profile Image">
+                </div>
+            </div>
+            <div class="user-right-info flex-center">
+                <div class="user-info-details flex-center btop-0">
+                    <span class="user-info-label">Full Name</span>
+                    <span class="user-info-value"><?php echo $_SESSION['firstName'] ?> <?php echo $_SESSION['lastName'] ?></span>
+                </div>
+                <div class="user-info-details flex-center">
+                    <span class="user-info-label">Username</span>
+                    <span class="user-info-value"><?php echo $_SESSION['username']?></span>
+                </div>
+                <div class="user-info-details flex-center">
+                    <span class="user-info-label">Phone number</span>
+                    <span class="user-info-value"><?php echo $_SESSION['telephone']?></span>
+                </div>
+                <div class="user-info-details flex-center">
+                    <span class="user-info-label">Email</span>
+                    <span class="user-info-value"><?php echo $_SESSION['email']?></span>
+                </div>
+            </div> 
+        </div>
+        <h1 class="section-heading">Your Reservations</h1>
+        <div class="dorm-card br-12">
+            <div class="dorms-image"></div>
+            <div class="dorm-info">
+                <p class="price">from <b>₱0</b> / month</p>
+                <h2>Dormitory Name</h2>
+                <p>31 Riofero Road, Arellano St.</p>
+                <br>
+                <a class="btn-two" href="page-wip.html">View</a>
+            </div>
+        </div>
+        <h1 class="section-heading">Your Submission</h1>
+        <div class="dorm-card br-12">
+            <div class="dorms-image"></div>
+            <div class="dorm-info">
+                <p class="price">from <b>₱0</b> / month</p>
+                <h2>Dormitory Name</h2>
+                <p>31 Riofero Road, Arellano St.</p>
+                <br>
+                <p class="under-review-btn" href="dorm-info.html">Under Review</p>
+            </div>
+        </div>
+
+        <a href="sign-out.php">Log Out</a>
+    </section>
+    <footer>
+        <p class="dev-name">© BIT5</p>
+        <ul class="footer-list flex-center">
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+        </ul>
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+</html>
+
+<?php } ?>

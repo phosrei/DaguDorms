@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaguDorms</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="../pages/dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="../pages/page-wip.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="../pages/page-wip.html" class="header-nav-link flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="dorms-section">
+        <div class="filters-container">
+            <section>
+                <h2 class="filters-heading">Filters</h2>
+                <div class="filter-option">
+                    <label for="priceRange">Price Range</label>
+                    <input type="range" min="0" max="10000" value="0" class="slider" id="priceRange">
+                    <p>₱<span id="priceValue">0</span></p>
+                </div>
+                <div class="filter-option">
+                    <label for="ratingsRange">Ratings</label>
+                    <input type="range" min="0" max="5.0" value="0" step="0.1" class="slider" id="ratingsRange">
+                    <p><span id="rateValue">0</span></p>
+                </div>
+            </section>
+            <hr class="filters-divider">
+            <section class="filter-options">
+                <h2 class="filters-heading">Features</h2>
+                <div>
+                    <input type="checkbox" class="checkbox" id="airConditioning" name="airConditioning">
+                    <label for="airConditioning">Air Conditioning</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="elevator" name="elevator">
+                    <label for="elevator">Elevator</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="kitchen" name="kitchen">
+                    <label for="kitchen">Kitchen</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="petsAllowed" name="petsAllowed">
+                    <label for="petsAllowed">Pets Allowed</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="utilities" name="utilities">
+                    <label for="utilities">Utilities Included</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="washingMachine" name="washingMachine">
+                    <label for="washingMachine">Washing Machine</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="wifi" name="wifi">
+                    <label for="wifi">Wi-Fi</label>
+                </div>
+            </section>
+            <hr class="filters-divider">
+            <section class="filter-options">
+                <h2 class="filters-heading">Room Type</h2>
+                <div>
+                    <input type="checkbox" class="checkbox" id="dormRoom" name="dormRoom">
+                    <label for="dormRoom">Dorm Room</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="singleBed" name="singleBed">
+                    <label for="singleBed">Single Bed</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="twoBeds" name="twoBeds">
+                    <label for="twoBeds">Two Beds</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="studio" name="studio">
+                    <label for="studio">Studio</label>
+                </div>
+            </section>
+        </div>
+        <div class="dorms-listing" id="dorms-listing">
+            <div class="search-container">
+                <div class="search-bar br-12">
+                    <span class="search-icon flex-center">
+                        <img src="../assets/images/search-icon.svg" alt="Search">
+                    </span>
+                    <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
+                </div>
+                <div class="move-dates-wrapper br-12">
+                    <div class="move-date-container flex-center" style="border-right: 2px solid #DBDDE1">
+                        <img class="calendar-icon" src="../assets/images/calendar-icon.svg" alt="Calendar Icon">
+                        <div class="move-date flex-center">
+                            <p>Move in</p>
+                            <input class="move-input" type="date" name="end-date" id="start-date">
+                        </div>
+                    </div>
+                    <div class="move-date-container flex-center">
+                        <img class="calendar-icon" src="../assets/images/calendar-icon.svg" alt="Calendar Icon">
+                        <div class="move-date flex-center">
+                            <p>Move out</p>
+                            <input class="move-input" type="date" name="end-date" id="end-date">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="dorm-card-root" id="dorm-card-root">
+        </div>
+        </div>
+    </section>
+    <footer>
+        <p class="dev-name">© BIT5</p>
+        <ul class="footer-list flex-center">
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+        </ul>
+    </footer>
+    <script src="../assets/js/dorms.js"></script>
+</body>
+</html>
