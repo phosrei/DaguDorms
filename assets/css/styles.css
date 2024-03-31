@@ -313,6 +313,7 @@ footer {
 }
 
 .search-icon {
+  opacity: 50%;
   cursor: default;
 }
 
