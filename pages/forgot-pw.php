@@ -56,7 +56,7 @@
 </head>
 <body>
 <header>
-        <a href="../index.html">
+        <a href="../index.php">
             <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a> 
         <nav class="header-nav flex-center">
