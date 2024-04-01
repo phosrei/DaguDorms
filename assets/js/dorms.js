@@ -70,7 +70,7 @@ const displayDorm = (items) => {
                     <p class="price">from <b>₱${price}</b> / month</p>
                     <h2>${title}</h2>
                     <p>${location}</p>
-                    <a class="btn-two" href="dorm-info.html?id=${id}&title=${encodeURIComponent(title)}&price=${price}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}&room_image=${encodeURIComponent(room_image)}&room_name=${encodeURIComponent(room_name)}&room_details=${encodeURIComponent(room_details)}&contactNum=${encodeURIComponent(contactNum)}&email=${encodeURIComponent(email)}&facebook=${encodeURIComponent(facebook)}&tags=${encodedTags}">View</a>
+                    <a class="btn-two" href="../pages/dorm-info.php?id=${id}&title=${encodeURIComponent(title)}&price=${price}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}&room_image=${encodeURIComponent(room_image)}&room_name=${encodeURIComponent(room_name)}&room_details=${encodeURIComponent(room_details)}&contactNum=${encodeURIComponent(contactNum)}&email=${encodeURIComponent(email)}&facebook=${encodeURIComponent(facebook)}&tags=${encodedTags}">View</a>
                 </div>
             </div>`
         );

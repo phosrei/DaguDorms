@@ -3,7 +3,7 @@
 
     include("../assets/php/config.php");
     if (isset($_SESSION["id"]) && $_SESSION["username"]) {
-        header("location: ../pages/sign-out.php");
+        header("location: ../index.php");
     }  
     else {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -13,24 +13,29 @@
             $email = $_POST['email'];
             $telephone = $_POST['telephone'];
             $password = $_POST['password'];
+            $confirmPassword = $_POST['confirm_password'];
 
-            $verify_user = mysqli_query($con, "SELECT username, email FROM form WHERE username='$username' AND email='$email");
+            if ($confirmPassword !== $password) {
+                echo '<script type="text/javascript">alert("Password does not match"); window.location.href = "forgot-pw.php";</script>';
+                exit;
+            }
+
+            $verify_user = mysqli_query($con, "SELECT username, email FROM form WHERE username='$username' AND email='$email'");
 
             if (mysqli_num_rows($verify_user) != 0) {
                 echo '<script type="text/javascript">alert("Username/Email has been taken, please try again"); window.location.href = "sign-up.php";</script>';
                 exit;
             } 
             else {
-                $data = mysqli_fetch_assoc($verify_email);
-                $id = $data['id'];
-                $_SESSION['username'] = $data['username'];
-                $_SESSION['firstName'] = $data['firstName'];
-                $_SESSION['lastName'] = $data['lastName'];
-                $_SESSION['email'] = $data['email'];
-                $_SESSION['telephone'] = $data['telephone'];
-
                 mysqli_query($con, "INSERT INTO form(username, firstName, lastName, email, telephone, password) 
                     VALUES ('$username', '$firstName', '$lastName', '$email', '$telephone', '$password')");
+            
+                $_SESSION['username'] = $username;
+                $_SESSION['firstName'] = $firstName;
+                $_SESSION['lastName'] = $lastName;
+                $_SESSION['email'] = $email;
+                $_SESSION['telephone'] = $telephone;
+            
                 header("location: user-welcome.php");
                 exit;
             }
@@ -48,16 +53,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
 </head>
 <body>
-    <header>
+    <header class="hover-header">
         <a href="../index.php">
-            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+            <img class="hover-header-icon header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a> 
         <nav class="header-nav flex-center">
-            <ul class="header-list flex-center">
+            <ul class="home-header-list flex-center">
                 <li class="anim-under"><a href="../index.php" class="flex-center">Home</a></li>
-                <li class="anim-under"><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+                <li class="anim-under"><a href="../pages/dorms.php" class="flex-center">Dorms</a></li>
                 <li class="dropdown flex-center">
-                    <button class="dropdown-button flex-center" onclick="toggleDropdown()">
+                    <button class="hover-dropdown-button flex-center" onclick="toggleDropdown()">
                         <img src="../assets/images/dropdown-icon.svg">
                     </button>
                     <div id="dropdown-menu" class="dropdown-menu">
@@ -65,7 +70,13 @@
                             <div class="dropdown-heading-left flex-center">
                                 <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
                                 <div>
-                                    <a class="dropdown-heading-btn" href="sign-in.php">Sign In</a>
+                                    <?php 
+                                        if (!isset($_SESSION["username"])) {
+                                            echo '<a class="dropdown-heading-btn" href="../pages/sign-in.php">Sign In</a>';
+                                        } else {
+                                            echo '<a class="dropdown-heading-btn" href="../pages/user-profile-edit.php">Edit Profile</a>';
+                                        }
+                                    ?>
                                 </div>
                             </div>
                             <div class="dropdown-heading-right flex-center">
@@ -74,34 +85,47 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="dropdown-main flex-center">
-                            <hr>
-                            <a href="user-profile.php">
-                                <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
-                                Your profile
-                            <a href="link1">
-                                <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
-                                Add account
-                            </a>
-                            <hr>
-                            <a href="#link2">
-                                <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
-                                Reservations
-                            </a>
-                            <a href="/pages/page-wip.html">
-                                <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
-                                Submissions
-                            </a>
-                            <a href="#link3">
+                        <div class="dropdown-main flex-center"> 
+                            <hr>   
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                    echo '<a href="../pages/user-profile.php">
+                                        <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
+                                        Your profile
+                                    </a>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
+                                        Add account
+                                    </a>';
+                                    echo '<hr>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
+                                        Reservations
+                                        </a>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
+                                        Submissions
+                                        </a>';
+                                }
+                            ?>
+                            <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/team-icon.svg">
                                 About Us
                             </a>
-                            <a href="#link3">
+                            <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
                                 FAQ
                             </a>
-                            <hr>
-                            <a href="#link3">Sign Out</a>
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                    echo '<hr>';
+                                }
+                            ?>
+                            <?php 
+                                if (isset($_SESSION["username"])) {
+                                    echo '<a href="../pages/sign-out.php">Sign Out</a>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </li>
@@ -120,36 +144,36 @@
                     <div class="auth-column">
                         <div class="input-layout">
                             <label class="input-label" for="username-input">Username</label>
-                            <input class="auth-input" type="text" name="Username" id="username-input" placeholder="Enter username" required>
+                            <input class="auth-input" type="text" name="username" id="username-input" placeholder="Enter username" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-firstn-input">First Name</label>
-                            <input class="auth-input" type="text" name="First Name" id="su-firstn-input" placeholder="Enter first name" required>
+                            <input class="auth-input" type="text" name="firstName" id="su-firstn-input" placeholder="Enter first name" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-lastn-input">Last Name</label>
-                            <input class="auth-input" type="text" name="Last Name" id="su-lastn-input" placeholder="Enter last name" required>
+                            <input class="auth-input" type="text" name="lastName" id="su-lastn-input" placeholder="Enter last name" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-email-input">Email Address</label>
-                            <input class="auth-input" type="email" name="Email Address" id="su-email-input" placeholder="outlook@gmail.com" required>
+                            <input class="auth-input" type="email" name="email" id="su-email-input" placeholder="outlook@gmail.com" required>
                         </div>
                     </div>
                     <div class="auth-column">
                         <div class="input-layout">
                             <label class="input-label" for="su-phone-num-input">Phone Number</label>
-                            <input class="auth-input" type="tel" name="Phone Number" id="su-phone-num-input" placeholder="+63 912 345 6789" required>
+                            <input class="auth-input" type="tel" name="telephone" id="su-phone-num-input" placeholder="+63 912 345 6789" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="su-pw-input">Password</label>
-                            <input class="auth-input" type="password" name="Password" id="su-pw-input" placeholder="Enter password" required>
+                            <input class="auth-input" type="password" name="password" id="su-pw-input" placeholder="Enter password" required>
                         </div>
                         <div class="input-layout">
                             <label class="input-label" for="confirm-pw">Confirm Password</label>
-                            <input class="auth-input" type="password" name="Confirm Password" id="confirm-pw" placeholder="Confirm password" required>
+                            <input class="auth-input" type="password" name="confirm_password" id="confirm-pw" placeholder="Confirm password" required>
                         </div>
                         <div class="auth-actions-container">
-                            <a class="auth-btn flex-center" href="user-welcome.php">Sign Up</a>
+                            <input class="auth-btn flex-center" type="submit" name="sign-up" id="sign-up" value="Sign Up">
                             <p>Already have an account? <a class="link-style" href="sign-in.php">Sign in</a></p>
                         </div>
                     </div>

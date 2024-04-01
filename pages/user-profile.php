@@ -18,16 +18,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
 </head>
 <body class="flex-center">
-    <header>
-        <a href="../index.html">
-            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+    <header class="hover-header">
+        <a href="../index.php">
+            <img class="hover-header-icon header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a> 
         <nav class="header-nav flex-center">
-            <ul class="header-list flex-center">
-                <li class="anim-under"><a href="../index.html" class="flex-center">Home</a></li>
-                <li class="anim-under"><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+            <ul class="home-header-list flex-center">
+                <li class="anim-under"><a href="../index.php" class="flex-center">Home</a></li>
+                <li class="anim-under"><a href="../pages/dorms.php" class="flex-center">Dorms</a></li>
                 <li class="dropdown flex-center">
-                    <button class="dropdown-button flex-center" onclick="toggleDropdown()">
+                    <button class="hover-dropdown-button flex-center" onclick="toggleDropdown()">
                         <img src="../assets/images/dropdown-icon.svg">
                     </button>
                     <div id="dropdown-menu" class="dropdown-menu">
@@ -35,7 +35,13 @@
                             <div class="dropdown-heading-left flex-center">
                                 <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
                                 <div>
-                                    <a class="dropdown-heading-btn" href="sign-in.html">Sign In</a>
+                                    <?php 
+                                        if (!isset($_SESSION["username"])) {
+                                            echo '<a class="dropdown-heading-btn" href="../pages/sign-in.php">Sign In</a>';
+                                        } else {
+                                            echo '<a class="dropdown-heading-btn" href="../pages/user-profile-edit.php">Edit Profile</a>';
+                                        }
+                                    ?>
                                 </div>
                             </div>
                             <div class="dropdown-heading-right flex-center">
@@ -44,34 +50,47 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="dropdown-main flex-center">
-                            <hr>
-                            <a href="user-profile.html">
-                                <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
-                                Your profile
-                            <a href="link1">
-                                <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
-                                Add account
-                            </a>
-                            <hr>
-                            <a href="#link2">
-                                <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
-                                Reservations
-                            </a>
-                            <a href="/pages/page-wip.html">
-                                <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
-                                Submissions
-                            </a>
-                            <a href="#link3">
+                        <div class="dropdown-main flex-center"> 
+                            <hr>   
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                    echo '<a href="user-profile.php">
+                                        <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
+                                        Your profile
+                                    </a>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
+                                        Add account
+                                    </a>';
+                                    echo '<hr>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
+                                        Reservations
+                                        </a>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
+                                        Submissions
+                                        </a>';
+                                }
+                            ?>
+                            <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/team-icon.svg">
                                 About Us
                             </a>
-                            <a href="#link3">
+                            <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
                                 FAQ
                             </a>
-                            <hr>
-                            <a href="#link3">Sign Out</a>
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                    echo '<hr>';
+                                }
+                            ?>
+                            <?php 
+                                if (isset($_SESSION["username"])) {
+                                    echo '<a href="../pages/sign-out.php">Sign Out</a>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </li>
@@ -89,19 +108,19 @@
             <div class="user-right-info flex-center">
                 <div class="user-info-details flex-center btop-0">
                     <span class="user-info-label">Full Name</span>
-                    <span class="user-info-value">John Doe Napakagwapo</span>
+                    <span class="user-info-value"><?php echo $_SESSION["firstName"]; ?> <?php echo $_SESSION["lastName"]; ?></span>
                 </div>
                 <div class="user-info-details flex-center">
                     <span class="user-info-label">Username</span>
-                    <span class="user-info-value">username</span>
+                    <span class="user-info-value"><?php echo $_SESSION["username"]; ?></span>
                 </div>
                 <div class="user-info-details flex-center">
                     <span class="user-info-label">Phone number</span>
-                    <span class="user-info-value">+63 901 234 5678</span>
+                    <span class="user-info-value"><?php echo $_SESSION["telephone"]; ?></span>
                 </div>
                 <div class="user-info-details flex-center">
                     <span class="user-info-label">Email</span>
-                    <span class="user-info-value">outlook@gmail.com</span>
+                    <span class="user-info-value"><?php echo $_SESSION["email"]; ?></span>
                 </div>
             </div> 
         </div>

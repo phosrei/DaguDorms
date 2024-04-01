@@ -1,38 +1,31 @@
 <?php 
-    session_start();
+session_start();
 
-    include("../assets/php/config.php");
+include("../assets/php/config.php");
 
-    if (isset($_SESSION["id"]) && $_SESSION["username"]) {
-        header("location: ../pages/sign-out.php");
-    }  
-    else {
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-            $result = mysqli_query($con,"SELECT * FROM form WHERE username = '$username'");
+    $result = mysqli_query($con,"SELECT * FROM form WHERE username = '$username'");
 
-            if ($result) {
-                if ($result && mysqli_num_rows($result) > 0) {
-                    $data = mysqli_fetch_assoc($result);
+    if ($result && mysqli_num_rows($result) > 0) {
+        $data = mysqli_fetch_assoc($result);
 
-                    $_SESSION['id'] = $data['id'];
-                    $_SESSION['username'] = $username;
-                    $_SESSION['password'] = $password;
-                    $_SESSION['firstName'] = $data['firstName'];
-                    $_SESSION['lastName'] = $data['lastName'];
-                    $_SESSION['email'] = $data['email'];
-                    $_SESSION['telephone'] = $data['telephone'];
+        $_SESSION['id'] = $data['id'];
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['firstName'] = $data['firstName'];
+        $_SESSION['lastName'] = $data['lastName'];
+        $_SESSION['email'] = $data['email'];
+        $_SESSION['telephone'] = $data['telephone'];
 
-                    if($data['password'] == $password) {
-                        header("location: user-profile.php");
-                        die;
-                    } 
-                } 
-            } 
-        }
-
+        if($data['password'] == $password) {
+            header("location: user-profile.php");
+            die;
+        } 
+    } 
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +45,7 @@
         <nav class="header-nav flex-center">
             <ul class="home-header-list flex-center">
                 <li class="anim-under"><a href="../index.php" class="flex-center">Home</a></li>
-                <li class="anim-under"><a href="dorms.html" class="flex-center">Dorms</a></li>
+                <li class="anim-under"><a href="../pages/dorms.php" class="flex-center">Dorms</a></li>
                 <li class="dropdown flex-center">
                     <button class="hover-dropdown-button flex-center" onclick="toggleDropdown()">
                         <img src="../assets/images/dropdown-icon.svg">
@@ -62,7 +55,13 @@
                             <div class="dropdown-heading-left flex-center">
                                 <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
                                 <div>
-                                    <a class="dropdown-heading-btn" href="sign-in.php">Sign In</a>
+                                    <?php 
+                                        if (!isset($_SESSION["username"])) {
+                                            echo '<a class="dropdown-heading-btn" href="../pages/sign-in.php">Sign In</a>';
+                                        } else {
+                                            echo '<a class="dropdown-heading-btn" href="../pages/user-profile-edit.php">Edit Profile</a>';
+                                        }
+                                    ?>
                                 </div>
                             </div>
                             <div class="dropdown-heading-right flex-center">
@@ -71,34 +70,47 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="dropdown-main flex-center">
-                            <hr>
-                            <a href="user-profile.php">
-                                <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
-                                Your profile
-                            <a href="link1">
-                                <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
-                                Add account
-                            </a>
-                            <hr>
-                            <a href="#link2">
-                                <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
-                                Reservations
-                            </a>
-                            <a href="/pages/page-wip.html">
-                                <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
-                                Submissions
-                            </a>
-                            <a href="#link3">
+                        <div class="dropdown-main flex-center"> 
+                            <hr>   
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                    echo '<a href="user-profile.php">
+                                        <img class="dd-main-icon" src="../assets/images/dd-account-icon.svg">
+                                        Your profile
+                                    </a>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/dd-add-account-icon.svg">
+                                        Add account
+                                    </a>';
+                                    echo '<hr>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/booking-icon.svg">
+                                        Reservations
+                                        </a>';
+                                    echo '<a href="../pages/page-wip.php">
+                                        <img class="dd-main-icon" src="../assets/images/submit-icon.svg">
+                                        Submissions
+                                        </a>';
+                                }
+                            ?>
+                            <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/team-icon.svg">
                                 About Us
                             </a>
-                            <a href="#link3">
+                            <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
                                 FAQ
                             </a>
-                            <hr>
-                            <a href="#link3">Sign Out</a>
+                            <?php
+                                if (isset($_SESSION['username'])) {
+                                    echo '<hr>';
+                                }
+                            ?>
+                            <?php 
+                                if (isset($_SESSION["username"])) {
+                                    echo '<a href="../pages/sign-out.php">Sign Out</a>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </li>
@@ -113,14 +125,14 @@
                     <br>
                     <p>Log in to reserve and access other features</p>
                 </div>
-                <form class="auth-form flex-center">
+                <form class="auth-form flex-center" method="post">
                     <div class="input-layout">
                         <label class="input-label" for="si-username-input">Username</label>
-                        <input class="auth-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter username" required>
+                        <input class="auth-input si-auth" type="text" name="username" id="username" placeholder="Enter username" required>
                     </div>
                     <div class="input-layout">
                         <label class="input-label" for="si-pw-input">Password</label>
-                        <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
+                        <input class="auth-input si-auth" type="password" name="password" id="password" placeholder="Enter password" required>
                     </div>
                     <div class="input-layout-bottom">
                         <div>
@@ -129,14 +141,42 @@
                         </div>
                         <a class="link-style forgot-pw" href="forgot-pw.php">Forgot password?</a>
                     </div>
+                    <input class="auth-btn flex-center" type="submit" name="sign-in"  value="Sign in" onclick="IsRememberMe()">
                 </form>
-                <a class="auth-btn flex-center" href="../index.php">Sign in</a>
                 <p>Don't have an account? <a class="link-style" href="sign-up.php">Sign up</a></p>
             </div>
             <div class="auth-right"></div>
         </div>
     </div>
+    <script>
+        const rememberCheck = document.getElementById("remember-me"),
+            passwordInput = document.getElementById("password"),
+            usernameInput = document.getElementById("username");
+
+        if (localStorage.checkbox && localStorage.checkbox !== "") {
+            rememberCheck.setAttribute("checked", "checked");
+            passwordInput.value = localStorage.password;
+            usernameInput.value = localStorage.username;
+        }
+        else {
+            rememberCheck.setAttribute("checked");
+            passwordInput.value = "";
+            usernameInput.value = "";
+        }
+
+        function IsRememberMe() {
+            if (rememberCheck.checked && usernameInput.value !== "" && passwordInput.value !== "") {
+                localStorage.username = usernameInput.value;
+                localStorage.password = passwordInput.value;
+                localStorage.checkbox = rememberCheck.value;
+            } 
+            else {
+                localStorage.usernameInput = "";
+                localStorage.passwordInput = "";
+                localStorage.checkbox = "";
+            }
+        }
+    </script>
     <script src="../assets/js/dropdown.js"></script>
 </body>
 </html>
-<?php } ?>
