@@ -120,7 +120,7 @@
                             </a>
                             <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
-                                FAQ
+                                Contact
                             </a>
                             <?php
                                 if (isset($_SESSION['username'])) {

@@ -101,7 +101,7 @@
                             </a>
                             <a href="../pages/page-wip.php">
                                 <img class="dd-main-icon" src="../assets/images/faq-icon.svg">
-                                FAQ
+                                Contact
                             </a>
                             <?php
                                 if (isset($_SESSION['username'])) {
@@ -124,7 +124,7 @@
             <div class="auth-heading">
                 <h1>Edit Profile</h1>
             </div>
-            <form class="auth-form" action="" method="post">
+            <form class="auth-form" method="post">
                 <div class="auth-row">
                     <div class="auth-column">
                         <div class="input-layout">
