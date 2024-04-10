@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: #000000;
+    background-color: #fff;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    border-bottom: 1px solid #DBDDE1;
+    transition: background-color 0.5s ease; 
+  }
+  
+  .home-header li a {
+    color: #fcfcfc;
+    transition: color 0.3s ease;
+  }
+  
+  header li a {
+    text-align: center;
+    height: 100%;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  header:hover .home-header-icon {
+    filter: brightness(100%);
+  }
+  
+  .header-icon {
+    margin: 10px 0;
+    height: 30px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .home-header-icon {
+    filter: brightness(0) invert(1);
+  }
+  
+  .header-icon:hover {
+    transform: scale(1.3);
+  }
+  
+  .header-nav {
+    height: 100%;
+  }
+  
+  .header-nav-list {
+    flex-direction: row;
+    gap: 16px;
+    list-style: none;
+    height: 100%;
+  }
+  
+  .header-nav-list li {
+    height: 100%;
+    position: relative;
+  }
+  
+  .header-nav-list li::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 0;
+    height: 2px;
+    background: #131627;
+    transition: max-width 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .header-nav-list li:hover::after {
+    max-width: 100%;
+  }
+  /*END OF HEADER*/
+  
+  /*BUTTON*/
+  
+  
+  .btn-1 {
+    background-color: rgb(228, 152, 165); 
+    border-radius: 10px;       
+    height: 2rem;
+    width: 4rem;
+  }
+  
+ 
+  /*TABLE CONTENTS*/
+  .table-container {
+    text-align: left;
+    margin-left: 40px;
+    margin-top:20px ;
+    font-size: large;
+  }
+  
+  .table-content {
+    border-collapse: collapse;
+    background-color: rgb(193, 191, 191);
+    margin: 25px auto;
+    width: 60rem;
+    margin-right: 10px;
+    font-size: small;
+    
+  }
+  
+  .table-content th {
+    background-color: rgb(157, 155, 155);
+    width: 355px;
+    height: 15px;
+    padding: 12px 8px;
+    margin-top: 2px;
+    text-align: center;
+    padding-right: 15px;
+  }
+  
+  .table-content td { 
+    padding: 25px;
+    vertical-align: text-top;
+    text-align: top;
+  }
+  
+  .table-content th:nth-last-child(1),
+  .table-content td:nth-last-child(1) {
+    text-align: center;
+  }
+  
+  .table-content th:first-child {
+    border-top-left-radius: 20px;
+  }
+  
+  .table-content th:last-child {
+    border-top-right-radius: 20px;
+  }
+  
+  .table-content:first-child {
+    border-top-left-radius: 20px;
+  }
+  
+  .table-content:last-child {
+    border-top-right-radius: 20px;
+  }
+  
+ 
+  /* ADMIN PANEL */
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    flex: 1;
+  }
+  
+  .admin-panel {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 200px;
+    border-right: 1px solid rgb(188, 184, 184);
+    text-align: center;
+  }
+  
+  .admin-panel h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .admin-nav li {
+    margin-bottom: 10px;
+  }
+  
+  .admin-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-nav a:hover {
+    background-color: #ddd;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    
+  }
+  
+  .admin-btn {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  .admin-btn:hover {
+    background-color: #ddd;
+  }
