@@ -64,13 +64,13 @@ const displayDorm = (items) => {
         const encodedTags = tags.map(tag => encodeURIComponent(tag)).join(',');
 
         return (
-            `<div class="dorm-card br-12">
+            `<div class="dorm-card">
                 <img class="dorms-image" src=${image}>
                 <div class="dorm-info">
                     <p class="price">from <b>₱${price}</b> / month</p>
                     <h2>${title}</h2>
                     <p>${location}</p>
-                    <a class="btn-two" href="dorm-info.html?id=${id}&title=${encodeURIComponent(title)}&price=${price}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}&room_image=${encodeURIComponent(room_image)}&room_name=${encodeURIComponent(room_name)}&room_details=${encodeURIComponent(room_details)}&contactNum=${encodeURIComponent(contactNum)}&email=${encodeURIComponent(email)}&facebook=${encodeURIComponent(facebook)}&tags=${encodedTags}">View</a>
+                    <a class="button" href="dorm-info.html?id=${id}&title=${encodeURIComponent(title)}&price=${price}&image=${encodeURIComponent(image)}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}&room_image=${encodeURIComponent(room_image)}&room_name=${encodeURIComponent(room_name)}&room_details=${encodeURIComponent(room_details)}&contactNum=${encodeURIComponent(contactNum)}&email=${encodeURIComponent(email)}&facebook=${encodeURIComponent(facebook)}&tags=${encodedTags}">View</a>
                 </div>
             </div>`
         );

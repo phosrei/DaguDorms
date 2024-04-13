@@ -9,12 +9,12 @@
 </head>
 <body class="index-body">
     <div id="overlay" class="overlay"></div>
-    <header class="header-hover header-pos">
+    <header class="header-pos">
         <a class="header-icon-container" href="#">
             <img class="header-icon" src="assets/images/dagudorms-icon.svg" alt="Header Icon">
         </a>
-        <nav class="header-nav">
-            <ul class="header-list flex-center">
+        <nav class="header-nav"> 
+            <ul class="header-list flex-acenter">
                 <li><a href="index.html" class="flex-center">Home</a></li>
                 <li><a href="pages/dorms.html" class="flex-center">Dorms</a></li>
                 <li>
@@ -29,7 +29,7 @@
         <div class="dropdown-heading">
             <div class="dropdown-heading-left flex-acenter">
                 <img class="profile-icon-small" src="assets/images/profile-icon-small.svg" alt="Profile Icon">
-                <a class="sign-in-button button" href="pages/sign-in.html">Sign In</a>
+                <a class="button" href="pages/sign-in.html">Sign In</a>
             </div>
             <div class="dropdown-heading-right flex-center">
                 <button id="close-button" class="close-button">
@@ -86,39 +86,68 @@
         </nav>
     </div>
     <section class="hero-section flex-center">
-        <div class="hero-mid flex-center">
-            <p class="hero-main-text">DaguDorms</p>
-            <a class="hero-button button" href="pages/dorms.html">Get Started</a>
+        <div class="hero-mid">
+            <div class="title"><img src="assets/images/dagudorms-title.svg"></div>
+            <span>Find the best Dagupan dormitory for you! If you’re a student attending school in Dagupan, 
+                  chances are you will need to find a place to stay. Dormitories are a popular option 
+                  for many students, as they offer a sense of community and support that can be hard to 
+                  come by when living on your own. But with so many dormitories to choose from, it can 
+                  be hard to know where to start. That’s why we’ve made it easier than ever for you to 
+                  find your dorm in Dagupan!
+            </span>
+            <a class="button" href="pages/dorms.html">Find a dorm</a>
         </div>
     </section>
-    <section class="info-section flex-center">
-        <span class="info-text">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas molestias excepturi sint occaecati cupiditate non
-            provident, similique sunt in culpa qui officia deserunt mollitia
-            animi, id est laborum et dolorum fuga. Et harum quidem rerum
-            facilis est et expedita distinctio. Nam libero tempore, cum soluta
-            nobis est eligendi optio cumque nihil impedit quo minus id quod
-            maxime placeat facere possimus, omnis voluptas assumenda est,
-            omnis dolor repellendus.
-        </span>
-        <img class="info-img" src="assets/images/room.png" alt="Apartment Illustration">
+    <section class="dorm-preview-section flex-center">
+        <h1>LATEST DORMS LISTINGS</h1>
+    <div class="dorm-card-container flex-center">
+        <div class="dorm-card flex-center">
+            <div class="dorm-card-img"></div>
+            <div class="dorm-card-info"></div>
+        </div>
+        <div class="dorm-card flex-center">
+            <div class="dorm-card-img"></div>
+            <div class="dorm-card-info"></div>
+        </div>
+        <div class="dorm-card flex-center">
+            <div class="dorm-card-img"></div>
+            <div class="dorm-card-info"></div>
+        </div>
+        <div class="dorm-card flex-center">
+            <div class="dorm-card-img"></div>
+            <div class="dorm-card-info"></div>
+        </div>
+    </div>
     </section>
-    <section class="box-section flex-center">
-        <div class="box flex-center bRadius-12"></div>
-        <div class="box flex-center bRadius-12"></div>
-        <div class="box flex-center bRadius-12"></div>
-        <div class="box flex-center bRadius-12"></div>
+    <section class="suggestion-section flex-center">
+        <a class="suggestion-box find-a-dorm flex-acenter" href="pages/dorms.html">
+            <h3>Find a dorm</h2>
+            <img src="assets/images/search-icon-grey.svg" alt="Find Dorm Icon">
+            <p>Discover the perfect off-campus housing to fit your needs.</p>
+        </a>
+        <a class="suggestion-box submit-a-dorm flex-acenter" href="">
+            <h3>Submit a dorm</h2>
+            <img src="assets/images/submit-icon-grey.svg" alt="Find Dorm Icon">
+            <p>Help students find their perfect off-campus home. 
+                Share your available dorm with our community.
+            </p>
+        </a>
     </section>
-    <footer>
-        <p class="dev-name">© BIT5</p>
-        <ul class="footer-list flex-center">
-            <li>List</li>
-            <li>List</li>
-            <li>List</li>
-            <li>List</li>
-        </ul>
+    <footer class="index-footer">
+        <div class="footer-left">
+            <h2>DAGUDORMS.COM</h2>
+            <span>Find the best Dagupan dormitory for you! If you're a student attending school in Dagupan, 
+                chances are you will need to find a place to stay. Dormitories are a popular option 
+                for many students, as they offer a sense of community and support that can be hard to 
+                come by when living on your own. But with so many dormitories to choose from, it can 
+                be hard to know where to start. That's why we've made it easier than ever for you to 
+                find your dorm in Dagupan!
+            </span>
+            <span class="footer-bot">
+                <p>© 2024 DaguDorms - BIT5 Philippines</p>
+                <p>All material presented herein is intended for project purposes only.</p>
+            </span>
+        </div>
     </footer>
     <script src="assets/js/dropdown.js"></script>
 </body>
