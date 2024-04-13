@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaguDorms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+</head>
+<body class="sign-in-body">
+    <header>
+        <a href="index.html">
+            <img class="header-icon" src="assets/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav flex-center">
+            <ul class="header-list flex-center">
+                <li><a href="dorms.html" class="header-nav-link flex-center">Dorms</a></li>
+                <li><a href="about.html" class="header-nav-link flex-center">About</a></li>
+                <li><a href="contact.html" class="header-nav-link flex-center">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-section flex-center">
+        <div class="contact-container">
+            <div class="contact-left flex-center"> 
+                <div class="contact-heading">
+                    <h1>Contact Us</h1>
+                    <br>
+                    <p>Want to know more? Reach out to us!</p>
+                </div>
+                <form class="contact-form flex-center">
+                    <div class="contact-layout">
+                        <label class="input-label" for="si-username-input">Name</label>
+                        <input class="name-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter name" required>
+                    </div>
+                    <div class="contact-layout">
+                        <label class="input-label" for="si-email-input">Email</label>
+                        <input class="email-input si-auth" type="email" name="email" id="si-email-input" placeholder="outlook@gmail.com" required>
+                    </div>
+                    <div class="contact-layout">
+                        <label class="input-label" for="si-subject-input">Subject</label>
+                        <input class="subject-input si-auth" type="text" name="subject" id="si-subject-input" placeholder="Write subject" required>
+                    </div>
+                    <div class="contact-layout">
+                        <label class="input-label" for="si-message-input">Message</label>
+                        <input class="message-input si-auth" type="text" name="message" id="si-message-input" placeholder="Write subejct" required>
+                    </div>
+                    <a class="submit flex-center" href="index.html">submit</a>
+                </form>
+               
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+    <script src="../assets/js/dropdown.js"></script>
+
+    <footer>
+        <p class="dev-name">© BIT5</p>
+        <ul class="footer-list flex-center">
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+        </ul>
+    </footer>
+</body>
+</html>
