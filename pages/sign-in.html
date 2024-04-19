@@ -11,7 +11,7 @@
     <div id="overlay" class="overlay"></div>
     <header class="header-hover">
         <a class="header-icon-container" href="../index.html">
-            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+            <img class="header-icon" src="../assets/icons/dagudorms-icon.svg" alt="Header Icon">
         </a>
         <nav class="header-nav">
             <ul class="header-list flex-acenter">
@@ -19,7 +19,7 @@
                 <li><a href="dorms.html" class="flex-center">Dorms</a></li>
                 <li>
                     <button id="dropdown-button">
-                        <img class="dropdown-icon" src="../assets/images/dropdown-icon.svg">
+                        <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
                     </button>
                 </li>
             </ul>
@@ -28,12 +28,12 @@
     <div id="dropdown-menu" class="dropdown-menu">
         <div class="dropdown-heading">
             <div class="dropdown-heading-left flex-acenter">
-                <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
+                <img class="profile-icon-small" src="../assets/icons/profile-icon-small.svg" alt="Profile Icon">
                 <a class="button" href="sign-in.html">Sign In</a>
             </div>
             <div class="dropdown-heading-right flex-center">
                 <button id="close-button" class="close-button">
-                    <img class="close-icon" src="../assets/images/close-icon.svg">
+                    <img class="close-icon" src="../assets/icons/close-icon.svg">
                 </button>
             </div>
         </div>
@@ -41,13 +41,13 @@
             <ul class="dropdown-list">
                 <li>
                     <a class="flex-acenter" href="user-profile.html">
-                        <img src="../assets/images/acc-icon.svg">
+                        <img src="../assets/icons/acc-icon.svg">
                         Your profile
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/add-acc-icon.svg" alt="Add Account Icon">
+                        <img src="../assets/icons/add-acc-icon.svg" alt="Add Account Icon">
                         Add account
                     </a>
                 </li>
@@ -55,25 +55,25 @@
             <ul class="dropdown-list">
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/reservations-icon.svg" alt="Reservations Icon">
+                        <img src="../assets/icons/reservations-icon.svg" alt="Reservations Icon">
                         Reservations
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="/page-wip.html">
-                        <img src="../assets/images/submissions-icon.svg" alt="Submissions Icon">
+                        <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
                         Submissions
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/about-us-icon.svg" alt="About Us Icon">
+                        <img src="../assets/icons/about-us-icon.svg" alt="About Us Icon">
                         About Us
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/contact-icon.svg" alt="Contact Icon">
+                        <img src="../assets/icons/contact-icon.svg" alt="Contact Icon">
                         Contact
                     </a>
                 </li>
@@ -86,34 +86,31 @@
         </nav>
     </div>
     <div class="auth-section flex-center">
-        <div class="auth-container">
-            <div class="auth-left flex-center"> 
-                <div class="auth-heading">
-                    <h1>Sign In</h1>
-                    <br>
-                    <p>Log in to reserve and access other features</p>
-                </div>
-                <form class="auth-form flex-center">
-                    <div class="input-layout">
-                        <label class="input-label" for="si-username-input">Username</label>
-                        <input class="auth-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter username" required>
-                    </div>
-                    <div class="input-layout">
-                        <label class="input-label" for="si-pw-input">Password</label>
-                        <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
-                    </div>
-                    <div class="input-layout-bottom">
-                        <div>
-                            <input type="checkbox" class="checkbox" id="remember-me" name="remember-me">
-                            <label class="remember-me" for="remember-me">Remember me</label>
-                        </div>
-                        <a class="link-style forgot-pw" href="forgot-pw.html">Forgot password?</a>
-                    </div>
-                </form>
-                <a class="btn flex-center" href="../index.html">Sign in</a>
-                <p>Don't have an account? <a class="link-style" href="sign-up.html">Sign up</a></p>
+        <div class="auth-container flex-center">
+            <div class="auth-heading">
+                <h1>Sign In</h1>
+                <br>
+                <p>Log in to reserve and access other features</p>
             </div>
-            <div class="auth-right"></div>
+            <form class="auth-form flex-center">
+                <div class="input-layout">
+                    <label class="input-label" for="si-username-input">Username</label>
+                    <input class="auth-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter username" required>
+                </div>
+                <div class="input-layout">
+                    <label class="input-label" for="si-pw-input">Password</label>
+                    <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
+                </div>
+                <div class="input-layout-bottom">
+                    <div>
+                        <input type="checkbox" class="checkbox" id="remember-me" name="remember-me">
+                        <label class="remember-me" for="remember-me">Remember me</label>
+                    </div>
+                    <a class="link-style forgot-pw" href="forgot-pw.html">Forgot password?</a>
+                </div>
+            </form>
+            <a class="button flex-center" href="../index.html">Sign in</a>
+            <p>Don't have an account? <a class="link-style" href="sign-up.html">Sign up</a></p>
         </div>
     </div>
     <script src="../assets/js/dropdown.js"></script>

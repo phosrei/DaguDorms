@@ -45,22 +45,16 @@
                         Your profile
                     </a>
                 </li>
-                <li>
-                    <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/icons/add-acc-icon.svg" alt="Add Account Icon">
-                        Add account
-                    </a>
-                </li>
             </ul>
             <ul class="dropdown-list">
                 <li>
-                    <a class="flex-acenter" href="page-wip.html">
+                    <a class="flex-acenter" href="user-profile.html">
                         <img src="../assets/icons/reservations-icon.svg" alt="Reservations Icon">
                         Reservations
                     </a>
                 </li>
                 <li>
-                    <a class="flex-acenter" href="/page-wip.html">
+                    <a class="flex-acenter" href="user-profile.html">
                         <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
                         Submissions
                     </a>
@@ -86,21 +80,7 @@
         </nav>
     </div>
     <section class="dorms-section">
-        <div class="filters-container">
-            <section>
-                <h2 class="filters-heading">Filters</h2>
-                <div class="filter-option">
-                    <label for="priceRange">Price Range</label>
-                    <input type="range" min="0" max="10000" value="0" class="slider" id="priceRange">
-                    <p>₱<span id="priceValue">0</span></p>
-                </div>
-                <div class="filter-option">
-                    <label for="ratingsRange">Ratings</label>
-                    <input type="range" min="0" max="5.0" value="0" step="0.1" class="slider" id="ratingsRange">
-                    <p><span id="rateValue">0</span></p>
-                </div>
-            </section>
-            <hr class="filters-divider">
+        <div class="filters-container" id="filters-container">
             <section class="filter-options">
                 <h2 class="filters-heading">Features</h2>
                 <div>
@@ -152,8 +132,17 @@
                     <label for="studio">Studio</label>
                 </div>
             </section>
+            <hr class="filters-divider">
+            <section class="filter-options">
+                    <p>Price Range</p>
+                    <div class="price-range">
+                        <input type="text" class="input-box" placeholder="Min">
+                        <span class="separator"> - </span>
+                        <input type="text" class="input-box" placeholder="Max">
+                    </div>
+            </section>
         </div>
-        <section class="dorms-section-left">
+        <section class="dorms-section-right">
             <div class="search-container flex-center">
                 <div class="search-bar">
                     <span class="search-icon flex-center">
@@ -161,44 +150,44 @@
                     </span>
                     <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
                 </div>
-                <button class="flex-acenter" id="dropdown-button">
-                    <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
+                <button class="filters-button flex-acenter" id="filters-button">
+                    <img class="dropdown-icon" src="../assets/icons/filters-icon.svg">
                 </button>
             </div>
             <div class="dorms-listing" id="dorms-listing">
-                <a class="dorm-card" href="dorm-info.html">
+                <a class="dorm-card" href="dorm-info1.html">
                     <div class="image" style="background-image: url(../assets/images/DORM2/dorm2_image1.png);"></div>
                     <div class="dorm-card-info">
                         <p class="price">from <b>₱${price}</b> / month</p>
                         <h1>Maligaya Street, Bonuan Gueset area near PureGold</h1>
                     </div>
                 </a>
-                <a class="dorm-card" href="dorm-info.html">
+                <a class="dorm-card" href="dorm-info2.html">
                     <div class="image" style="background-image: url(../assets/images/DORM1/dorm1_image1.png);"></div>
                     <div class="dorm-card-info">
                         <p class="price">from <b>₱${price}</b> / month</p>
                         <h1>Amado Street, Tapuac, Behind Lyceum Northwestern University</h1>
                     </div>
                 </a>
-                <a class="dorm-card" href="dorm-info.html">
+                <a class="dorm-card" href="dorm-info3.html">
                     <div class="image" style="background-image: url(../assets/images/DORM3/dorm3_image1.png);"></div>
                     <div class="dorm-card-info">
                         <p class="price">from <b>₱${price}</b> / month</p>
                         <h1>Tomboc, Balosan</h1>
                     </div>
                 </a>
-                <a class="dorm-card" href="dorm-info.html">
+                <a class="dorm-card" href="dorm-info4.html">
                     <div class="image" style="background-image: url(../assets/images/DORM4/dorm4_image1.png);"></div>
                     <div class="dorm-card-info">
                         <p class="price">from <b>₱${price}</b> / month</p>
                         <h1>Lasip, Boquig, Calasio</h1>
                     </div>
                 </a>
-                <a class="dorm-card" href="dorm-info.html">
+                <a class="dorm-card" href="dorm-info5.html">
                     <div class="image" style="background-image: url(../assets/images/DORM5/dorm5_image1.png);"></div>
                     <div class="dorm-card-info">
                         <p class="price">from <b>₱${price}</b> / month</p>
-                        <h1>Malta Road, Malued Dagupan City</h1>
+                        <h1>Malta Road, Malued, Dagupan City</h1>
                     </div>
                 </a>
             </div>
@@ -217,6 +206,13 @@
             <span class="footer-bot">
                 <p>© 2024 DaguDorms - BIT5 Philippines</p>
                 <p>All material presented herein is intended for project purposes only.</p>
+            </span>
+        </div>
+        <div class="footer-right">
+            <h2>CONTACT US</h2>
+            <span>
+                <p>dagudorms_support@gmail.com</p>
+                <p>31 Guilig, Dagupan, Pangasinan</p>
             </span>
         </div>
     </footer>
