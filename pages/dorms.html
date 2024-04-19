@@ -11,7 +11,7 @@
     <div id="overlay" class="overlay"></div>
     <header>
         <a class="header-icon-container" href="../index.html">
-            <img class="header-icon" src="../assets/images/dagudorms-icon.svg" alt="Header Icon">
+            <img class="header-icon" src="../assets/icons/dagudorms-icon.svg" alt="Header Icon">
         </a>
         <nav class="header-nav">
             <ul class="header-list flex-acenter">
@@ -19,7 +19,7 @@
                 <li><a href="dorms.html" class="flex-center">Dorms</a></li>
                 <li>
                     <button id="dropdown-button">
-                        <img class="dropdown-icon" src="../assets/images/dropdown-icon.svg">
+                        <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
                     </button>
                 </li>
             </ul>
@@ -28,12 +28,12 @@
     <div id="dropdown-menu" class="dropdown-menu">
         <div class="dropdown-heading">
             <div class="dropdown-heading-left flex-acenter">
-                <img class="profile-icon-small" src="../assets/images/profile-icon-small.svg" alt="Profile Icon">
+                <img class="profile-icon-small" src="../assets/icons/profile-icon-small.svg" alt="Profile Icon">
                 <a class="button" href="sign-in.html">Sign In</a>
             </div>
             <div class="dropdown-heading-right flex-center">
                 <button id="close-button" class="close-button">
-                    <img class="close-icon" src="../assets/images/close-icon.svg">
+                    <img class="close-icon" src="../assets/icons/close-icon.svg">
                 </button>
             </div>
         </div>
@@ -41,13 +41,13 @@
             <ul class="dropdown-list">
                 <li>
                     <a class="flex-acenter" href="user-profile.html">
-                        <img src="../assets/images/acc-icon.svg">
+                        <img src="../assets/icons/acc-icon.svg">
                         Your profile
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/add-acc-icon.svg" alt="Add Account Icon">
+                        <img src="../assets/icons/add-acc-icon.svg" alt="Add Account Icon">
                         Add account
                     </a>
                 </li>
@@ -55,25 +55,25 @@
             <ul class="dropdown-list">
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/reservations-icon.svg" alt="Reservations Icon">
+                        <img src="../assets/icons/reservations-icon.svg" alt="Reservations Icon">
                         Reservations
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="/page-wip.html">
-                        <img src="../assets/images/submissions-icon.svg" alt="Submissions Icon">
+                        <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
                         Submissions
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/about-us-icon.svg" alt="About Us Icon">
+                        <img src="../assets/icons/about-us-icon.svg" alt="About Us Icon">
                         About Us
                     </a>
                 </li>
                 <li>
                     <a class="flex-acenter" href="page-wip.html">
-                        <img src="../assets/images/contact-icon.svg" alt="Contact Icon">
+                        <img src="../assets/icons/contact-icon.svg" alt="Contact Icon">
                         Contact
                     </a>
                 </li>
@@ -153,43 +153,73 @@
                 </div>
             </section>
         </div>
-        <div class="dorms-listing" id="dorms-listing">
-            <div class="search-container">
+        <section class="dorms-section-left">
+            <div class="search-container flex-center">
                 <div class="search-bar">
                     <span class="search-icon flex-center">
-                        <img src="../assets/images/search-icon.svg" alt="Search">
+                        <img src="../assets/icons/search-icon.svg" alt="Search">
                     </span>
                     <input class="search-input" type="search" id="search_bar" name="search_bar" placeholder="Search dormitories in Dagupan City" spellcheck="false">
                 </div>
-                <div class="move-dates-wrapper">
-                    <div class="move-date-container flex-center" style="border-right: 2px solid #DBDDE1">
-                        <img class="calendar-icon" src="../assets/images/calendar-icon.svg" alt="Calendar Icon">
-                        <div class="move-date flex-center">
-                            <p>Move in</p>
-                            <input class="move-input" type="date" name="end-date" id="start-date">
-                        </div>
-                    </div>
-                    <div class="move-date-container flex-center">
-                        <img class="calendar-icon" src="../assets/images/calendar-icon.svg" alt="Calendar Icon">
-                        <div class="move-date flex-center">
-                            <p>Move out</p>
-                            <input class="move-input" type="date" name="end-date" id="end-date">
-                        </div>
-                    </div>
-                </div>
+                <button class="flex-acenter" id="dropdown-button">
+                    <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
+                </button>
             </div>
-            <div class="dorm-card">
-                <img class="dorm-card-img" src=${image}>
-                <div class="dorm-info">
-                    <p class="price">from <b>₱${price}</b> / month</p>
-                    <h2>${title}</h2>
-                    <p>${location}</p>
-                    <a class="animated-button button" href="dorm-info.html">View</a>
-                </div>
+            <div class="dorms-listing" id="dorms-listing">
+                <a class="dorm-card" href="dorm-info.html">
+                    <div class="image" style="background-image: url(../assets/images/DORM2/dorm2_image1.png);"></div>
+                    <div class="dorm-card-info">
+                        <p class="price">from <b>₱${price}</b> / month</p>
+                        <h1>Maligaya Street, Bonuan Gueset area near PureGold</h1>
+                    </div>
+                </a>
+                <a class="dorm-card" href="dorm-info.html">
+                    <div class="image" style="background-image: url(../assets/images/DORM1/dorm1_image1.png);"></div>
+                    <div class="dorm-card-info">
+                        <p class="price">from <b>₱${price}</b> / month</p>
+                        <h1>Amado Street, Tapuac, Behind Lyceum Northwestern University</h1>
+                    </div>
+                </a>
+                <a class="dorm-card" href="dorm-info.html">
+                    <div class="image" style="background-image: url(../assets/images/DORM3/dorm3_image1.png);"></div>
+                    <div class="dorm-card-info">
+                        <p class="price">from <b>₱${price}</b> / month</p>
+                        <h1>Tomboc, Balosan</h1>
+                    </div>
+                </a>
+                <a class="dorm-card" href="dorm-info.html">
+                    <div class="image" style="background-image: url(../assets/images/DORM4/dorm4_image1.png);"></div>
+                    <div class="dorm-card-info">
+                        <p class="price">from <b>₱${price}</b> / month</p>
+                        <h1>Lasip, Boquig, Calasio</h1>
+                    </div>
+                </a>
+                <a class="dorm-card" href="dorm-info.html">
+                    <div class="image" style="background-image: url(../assets/images/DORM5/dorm5_image1.png);"></div>
+                    <div class="dorm-card-info">
+                        <p class="price">from <b>₱${price}</b> / month</p>
+                        <h1>Malta Road, Malued Dagupan City</h1>
+                    </div>
+                </a>
             </div>
-        </div>
+        </section>
     </section>
-    <script src="../assets/js/dorms.js"></script>
+    <footer class="index-footer">
+        <div class="footer-left">
+            <h2>DAGUDORMS.COM</h2>
+            <span>Find the best Dagupan dormitory for you! If you're a student attending school in Dagupan, 
+                chances are you will need to find a place to stay. Dormitories are a popular option 
+                for many students, as they offer a sense of community and support that can be hard to 
+                come by when living on your own. But with so many dormitories to choose from, it can 
+                be hard to know where to start. That's why we've made it easier than ever for you to 
+                find your dorm in Dagupan!
+            </span>
+            <span class="footer-bot">
+                <p>© 2024 DaguDorms - BIT5 Philippines</p>
+                <p>All material presented herein is intended for project purposes only.</p>
+            </span>
+        </div>
+    </footer>
     <script src="../assets/js/dropdown.js"></script>
 </body>
 </html>
