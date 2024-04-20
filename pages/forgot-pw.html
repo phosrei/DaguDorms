@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
 </head>
-<body class="sign-in-body">
+<body>
     <div id="overlay" class="overlay"></div>
-    <header>
+    <header class="header-hover">
         <a class="header-icon-container" href="../index.html">
             <img class="header-icon" src="../assets/icons/dagudorms-icon.svg" alt="Header Icon">
         </a>
         <nav class="header-nav">
             <ul class="header-list flex-acenter">
                 <li><a href="index.html" class="flex-center">Home</a></li>
-                <li><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+                <li><a href="dorms.html" class="flex-center">Dorms</a></li>
                 <li>
                     <button id="dropdown-button">
                         <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
@@ -79,32 +79,35 @@
             </ul>
         </nav>
     </div>
-    <div class="contact-section flex-center">
-        <div class="contact-container flex-center">
-            <div class="contact-heading flex-center">
-                <h1>Contact Us</h1>
+    <div class="auth-section flex-center">
+        <div class="forgot-container auth-container flex-center">
+            <div class="auth-heading">
+                <h1>Forgot password?</h1>
                 <br>
-                <p>Want to know more? Reach out to us!</p>
             </div>
-            <form class="contact-form">
-                <div class="input-layout">
-                    <label class="input-label" for="si-username-input">Name</label>
-                    <input class="name-input auth-input" type="text" name="username" id="si-username-input" placeholder="Enter name" required>
+            <form class="auth-form flex-center">
+                <div class="input-layout email-layout">
+                    <label class="input-label" for="si-username-input">Email</label>
+                    <input class="auth-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter email" required>
                 </div>
                 <div class="input-layout">
-                    <label class="input-label" for="si-email-input">Email</label>
-                    <input class="email-input auth-input" type="email" name="email" id="si-email-input" placeholder="outlook@gmail.com" required>
+                    <label class="input-label" for="si-pw-input">Enter new password</label>
+                    <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
                 </div>
                 <div class="input-layout">
-                    <label class="input-label" for="si-subject-input">Subject</label>
-                    <input class="subject-input auth-input" type="text" name="subject" id="si-subject-input" placeholder="Write subject" required>
+                    <label class="input-label" for="si-pw-input">Confirm password</label>
+                    <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
                 </div>
-                <div class="input-layout">
-                    <label class="input-label" for="si-message-input">Message</label>
-                    <textarea class="msg-input auth-input" name="subject" id="si-subject-input" placeholder="Write message" required></textarea>
+                <div class="input-layout-bottom">
+                    <div>
+                        <input type="checkbox" class="checkbox" id="remember-me" name="remember-me">
+                        <label class="remember-me" for="remember-me">Remember me</label>
+                    </div>
+                    <a class="link-style forgot-pw" href="forgot-pw.html">Forgot password?</a>
                 </div>
-                <a class="button animated-button flex-center" href="index.html">Submit</a>
             </form>
+            <a class="animated-button button flex-center" href="../index.html">Sign in</a>
+            <p>Don't have an account? <a class="link-style" href="sign-up.html">Sign up</a></p>
         </div>
     </div>
     <script src="../assets/js/dropdown.js"></script>
