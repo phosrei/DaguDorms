@@ -303,7 +303,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent), url('../icons/hero-bg.png');
+    background-image: url('../icons/hero-bg.png');
     background-size: cover;
     background-position: bottom;
     opacity: 1;
