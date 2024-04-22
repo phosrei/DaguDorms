@@ -481,7 +481,7 @@ header {
   gap: 0.5rem;
 }
 
-.index-footer {
+footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -491,6 +491,14 @@ header {
   color: var(--black);
   border-top: 1px solid var(--borderColor-muted);
 
+  .footer-top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+    
     .footer-bot {
     color: #A88D91;
   }
