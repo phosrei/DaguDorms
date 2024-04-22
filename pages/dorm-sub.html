@@ -17,7 +17,7 @@
             </a>
             <nav class="header-nav">
                 <ul class="header-list flex-acenter">
-                    <li><a href="index.html" class="flex-center">Home</a></li>
+                    <li><a href="/index.html" class="flex-center">Home</a></li>
                     <li><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
                     <li>
                         <button id="dropdown-button">
@@ -56,7 +56,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="flex-acenter" href="user-profile.html">
+                        <a class="flex-acenter" href="seller-profile.html">
                             <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
                             Submissions
                         </a>
@@ -84,7 +84,7 @@
         <div class="subm-section flex-center">
             <div class="subm-container flex-center">
                 <h2>Dorm Submission Form</h2>
-                <form class="sub-form flex-center">
+                <form class="sub-form">
                     <div class="input-layout">
                         <label class="name-label" for="si-Dorm Name-input">Dorm Name</label>
                         <input class="Dname-input auth-input" type="text" name="Dorm Name" id="si-Dorm Name-input" placeholder="Enter dormitory name" required>
@@ -111,26 +111,14 @@
                     <div  class="img_btn" id="upload_button">
                         <label>
                             <input type="file" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" multiple>
-                            <h4><span class="btn btn-primary">Choose Files</span></h4>
                         </label>
                     </div>
                 </form>
                 <div class="next-btn">
-                    <a class="next flex-center" href="index.html">submit</a> 
+                    <a class="animated-button button flex-center" href="submitted.html">Submit</a> 
                 </div>
             </div>
         </div>
         <script src="../assets/js/dropdown.js"></script>
-
-
-        <footer>
-            <p class="dev-name">© BIT5</p>
-            <ul class="footer-list flex-center">
-                <li>List</li>
-                <li>List</li>
-                <li>List</li>
-                <li>List</li>
-            </ul>
-        </footer>
 </body>
 </html>
