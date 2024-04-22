@@ -369,9 +369,13 @@ header {
       width: 100%;
       max-width: 412px;
       height: max-content;
+      border: #d4d4d4 1px solid;
+      border-radius: 12px;
 
       .dorm-card-img {
         width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         height: 412px;
         object-fit: cover;
       }
@@ -469,7 +473,7 @@ header {
 }
 
 .dorm-card {
-  box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.3);
 }
 
 .auth-actions-container {
@@ -1085,7 +1089,7 @@ iframe {
 }
 .user-profile-section {
   flex-flow: column wrap;
-  padding: 32px;
+  margin: 1rem;
   max-width: 1290px;
   width: 100%;
 }
@@ -1168,7 +1172,19 @@ iframe {
 
 .webpage-wip-section {
   flex-direction: column;
-  height: 100vh;
+  height: 85vh;
+  gap: 16px;
+}
+
+.reserved-section {
+  flex-direction: column;
+  height: 85vh;
+  gap: 16px;
+}
+
+.submitted-section {
+  flex-direction: column;
+  height: 85vh;
   gap: 16px;
 }
 
