@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.css"/>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
+</head>
+<body>
+    <header>
+        <a class="header-icon-container" href="../index.html">
+            <img class="header-icon" src="../assets/icons/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav">
+            <ul class="header-list flex-acenter">
+                <li><a href="index.html" class="flex-center">Home</a></li>
+                <li><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+                <li>
+                    <button id="dropdown-button">
+                        <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="dropdown-menu" class="dropdown-menu">
+        <div class="dropdown-heading">
+            <div class="dropdown-heading-left flex-acenter">
+                <img class="profile-icon-small" src="../assets/icons/profile-icon-small.svg" alt="Profile Icon">
+                <a class="button" href="sign-in.html">Sign In</a>
+            </div>
+            <div class="dropdown-heading-right flex-center">
+                <button id="close-button" class="close-button">
+                    <img class="close-icon" src="../assets/icons/close-icon.svg">
+                </button>
+            </div>
+        </div>
+        <nav class="dropdown-nav flex-center">
+            <ul class="dropdown-list">
+                <li>
+                    <a class="flex-acenter" href="user-profile.html">
+                        <img src="../assets/icons/acc-icon.svg">
+                        Your profile
+                    </a>
+                </li>
+            </ul>
+            <ul class="dropdown-list">
+                <li>
+                    <a class="flex-acenter" href="user-profile.html">
+                        <img src="../assets/icons/reservations-icon.svg" alt="Reservations Icon">
+                        Reservations
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-acenter" href="seller-profile.html">
+                        <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
+                        Submissions
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-acenter" href="about-us.html">
+                        <img src="../assets/icons/about-us-icon.svg" alt="About Us Icon">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-acenter" href="contact.html">
+                        <img src="../assets/icons/contact-icon.svg" alt="Contact Icon">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <ul class="dropdown-list">
+                <li>
+                    <a class="flex-acenter" href="#link3">Sign Out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="user-welcome-section flex-center">
+        <div class="user-welcome-container flex-center br-12">
+            <img class="account-icon2" alt="" src="../assets/icons/user-profile-icon.svg">
+      	    <span class="username">@username</span>
+      		<h2 class="welcome-user">Welcome user!</h2>
+      		<p class="you-now-have">You now have access to these features:</p>
+      		<div class="user-features-wrapper">
+        		<ul class="user-features-list">
+          			<li>Reserving dormitories</li>
+                    <li>Submitting dormitories</li>
+                    <li>Profile editor</li>
+                    <li>Reviews</li>
+                </ul>
+      		</div>
+      		<a href="../index.html" class="animated-button button">Get Started</a>
+        </div>
+    </div>
+    <script src="../assets/js/dropdown.js"></script>
+</body>
+</html>
