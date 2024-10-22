@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaguDorms</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"/>
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    <header class="header-hover">
+        <a class="header-icon-container" href="../index.html">
+            <img class="header-icon" src="../assets/icons/dagudorms-icon.svg" alt="Header Icon">
+        </a>
+        <nav class="header-nav">
+            <ul class="header-list flex-acenter">
+                <li><a href="/index.html" class="flex-center">Home</a></li>
+                <li><a href="dorms.html" class="flex-center">Dorms</a></li>
+                <li>
+                    <button id="dropdown-button">
+                        <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="dropdown-menu" class="dropdown-menu">
+        <div class="dropdown-heading">
+            <div class="dropdown-heading-left flex-acenter">
+                <img class="profile-icon-small" src="../assets/icons/profile-icon-small.svg" alt="Profile Icon">
+                <a class="button" href="sign-in.html">Sign In</a>
+            </div>
+            <div class="dropdown-heading-right flex-center">
+                <button id="close-button" class="close-button">
+                    <img class="close-icon" src="../assets/icons/close-icon.svg">
+                </button>
+            </div>
+        </div>
+        <nav class="dropdown-nav flex-center">
+            <ul class="dropdown-list">
+                <li>
+                    <a class="flex-acenter" href="user-profile.html">
+                        <img src="../assets/icons/acc-icon.svg">
+                        Your profile
+                    </a>
+                </li>
+            </ul>
+            <ul class="dropdown-list">
+                <li>
+                    <a class="flex-acenter" href="user-profile.html">
+                        <img src="../assets/icons/reservations-icon.svg" alt="Reservations Icon">
+                        Reservations
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-acenter" href="seller-profile.html">
+                        <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
+                        Submissions
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-acenter" href="about-us.html">
+                        <img src="../assets/icons/about-us-icon.svg" alt="About Us Icon">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-acenter" href="contact.html">
+                        <img src="../assets/icons/contact-icon.svg" alt="Contact Icon">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <ul class="dropdown-list">
+                <li>
+                    <a class="flex-acenter" href="../index.html">Sign Out</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="auth-section flex-center">
+        <div class="forgot-container auth-container flex-center">
+            <div class="auth-heading">
+                <h1>Forgot password?</h1>
+                <br>
+            </div>
+            <form class="auth-form flex-center">
+                <div class="input-layout email-layout">
+                    <label class="input-label" for="si-username-input">Email</label>
+                    <input class="auth-input si-auth" type="text" name="username" id="si-username-input" placeholder="Enter email" required>
+                </div>
+                <div class="input-layout">
+                    <label class="input-label" for="si-pw-input">Enter new password</label>
+                    <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
+                </div>
+                <div class="input-layout">
+                    <label class="input-label" for="si-pw-input">Confirm password</label>
+                    <input class="auth-input si-auth" type="password" name="Password" id="si-pw-input" placeholder="Enter password" required>
+                </div>
+
+            </form>
+            <a class="animated-button button flex-center" href="email-sent.html">Reset Password</a>
+            <p><a class="link-style" href="sign-in.html">Sign-in instead</a></p>
+        </div>
+    </div>
+    <script src="../assets/js/dropdown.js"></script>
+</body>
+</html>

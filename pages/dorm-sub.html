@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DaguDorms</title>
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/inter');
+        </style>
+    </head>
+    <body>
+        <div id="overlay" class="overlay"></div>
+        <header>
+            <a class="header-icon-container" href="../index.html">
+                <img class="header-icon" src="../assets/icons/dagudorms-icon.svg" alt="Header Icon">
+            </a>
+            <nav class="header-nav">
+                <ul class="header-list flex-acenter">
+                    <li><a href="/index.html" class="flex-center">Home</a></li>
+                    <li><a href="../pages/dorms.html" class="flex-center">Dorms</a></li>
+                    <li>
+                        <button id="dropdown-button">
+                            <img class="dropdown-icon" src="../assets/icons/dropdown-icon.svg">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <div class="dropdown-heading">
+                <div class="dropdown-heading-left flex-acenter">
+                    <img class="profile-icon-small" src="../assets/icons/profile-icon-small.svg" alt="Profile Icon">
+                    <a class="button" href="sign-in.html">Sign In</a>
+                </div>
+                <div class="dropdown-heading-right flex-center">
+                    <button id="close-button" class="close-button">
+                        <img class="close-icon" src="../assets/icons/close-icon.svg">
+                    </button>
+                </div>
+            </div>
+            <nav class="dropdown-nav flex-center">
+                <ul class="dropdown-list">
+                    <li>
+                        <a class="flex-acenter" href="user-profile.html">
+                            <img src="../assets/icons/acc-icon.svg">
+                            Your profile
+                        </a>
+                    </li>
+                </ul>
+                <ul class="dropdown-list">
+                    <li>
+                        <a class="flex-acenter" href="user-profile.html">
+                            <img src="../assets/icons/reservations-icon.svg" alt="Reservations Icon">
+                            Reservations
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-acenter" href="seller-profile.html">
+                            <img src="../assets/icons/submissions-icon.svg" alt="Submissions Icon">
+                            Submissions
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-acenter" href="about-us.html">
+                            <img src="../assets/icons/about-us-icon.svg" alt="About Us Icon">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-acenter" href="contact.html">
+                            <img src="../assets/icons/contact-icon.svg" alt="Contact Icon">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <ul class="dropdown-list">
+                    <li>
+                        <a class="flex-acenter" href="../index.html">Sign Out</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="subm-section flex-center">
+            <div class="subm-container flex-center">
+                <h2>Dorm Submission Form</h2>
+                <form class="sub-form">
+                    <div class="input-layout">
+                        <label class="name-label" for="si-Dorm Name-input">Dorm Name</label>
+                        <input class="Dname-input auth-input" type="text" name="Dorm Name" id="si-Dorm Name-input" placeholder="Enter dormitory name" required>
+                    </div>
+                    <div class="input-layout">
+                        <label class="name-label" for="si-Dorm Overview-input">Dorm Overview</label>
+                        <input class="DOV-input auth-input" type="text" name="Dorm Overview" id="si-Dorm Overview-input" placeholder="Write something about your dormitory" required>
+                    </div>
+                    <div class="input-layout">
+                        <label class="name-label" for="si->Dorm Features-input">Dorm Features</label>
+                        <input class="DF-input auth-input" type="text" name=">Dorm Features" id="si->Dorm Features-input" placeholder="Write the features of your dormitory" required>
+                    </div>
+                    <div class="input-layout">
+                        <label class="name-label" for="si-Price-input">Price</label>
+                        <input class="price-input auth-input" type="Price" name="Price" id="si-Price-input" placeholder="Enter dormitory monthly price" required>
+                    </div>
+                    <div class="input-layout">
+                        <label class="name-label" for="si-pw-input">Rooms</label>
+                        <input class="rooms-input auth-input" type="text" name="Password" id="si-pw-input" placeholder="Write available rooms and their prices in your dormitory" required>
+                    </div>
+                    <div class="input-layout">
+                        <label class="name-label" for="si-pw-input">Upload Images</label>
+                    </div>
+                    <div  class="img_btn" id="upload_button">
+                        <label>
+                            <input type="file" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" multiple>
+                        </label>
+                    </div>
+                </form>
+                <div class="next-btn">
+                    <a class="animated-button button flex-center" href="submitted.html">Submit</a> 
+                </div>
+            </div>
+        </div>
+        <script src="../assets/js/dropdown.js"></script>
+</body>
+</html>
